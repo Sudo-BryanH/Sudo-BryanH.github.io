@@ -1,41 +1,28 @@
-.placeholder {
-    background-color: red;
+
+.top {
+    display:inline-block;
+    width:70%;
+    min-height:70%;
+    background-color:lightskyblue;
+    position:absolute;
+    margin: 0 auto;
+    padding: 10px;
+    margin-left:auto;
+    margin-right:auto;
 }
 
-.anotherClass {
-    background-color: lightseagreen;
+
+.nameplate {
+    float: left;
+    padding-left:15%;
+    font-size:100px;
+    text-justify:auto;
+    width:40%;
 }
 
-.container {
-    background-color: lightblue;
-}
-
-.nav-link-wrapper {
-
-    background-color: palegoldenrod;
-
-}
-
-.nav-wrapper {
-    display:flex;
-    justify-content: space-between;
-    padding: 18px;
-}
-
-.left-side {
-    display:flex;
-}
-
-.nav-wrapper > .left-side > div {
-    padding: 5px;
-    margin-left: 20px;
-    text-transform: uppercase;
-    font-size: 0.9em;
-}
-
-.nav-link-wrapper {
-    height:22px;
-    border-bottom: 1px solid transparent;
-    transition: border-bottom 0.5s;
-
+.profilepic {
+    float: right;
+    width:30%;
+    padding: 5%;
+    border-radius: 50%;
 }
