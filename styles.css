@@ -2,13 +2,15 @@
 .top {
     display:inline-block;
     width:70%;
-    min-height:70%;
-    background-color:lightskyblue;
-    position:absolute;
-    margin: 0 auto;
-    padding: 10px;
-    margin-left:auto;
+    max-width:1500px;
+    height:70%;
+    /*background-color:lightskyblue;*/
+    font-family: "Work Sans", sans-serif;
+    color:darkslategray;
+    margin-left: 15%;
     margin-right:auto;
+    padding-top: 5%;
+
 }
 
 
@@ -17,7 +19,7 @@
     padding-left:15%;
     font-size:100px;
     text-justify:auto;
-    width:40%;
+    width:30%;
 }
 
 .profilepic {
@@ -25,4 +27,80 @@
     width:30%;
     padding: 5%;
     border-radius: 50%;
+}
+
+.left-pic-par {
+    border-radius:12px;
+    display:inline-block;
+    width:70%;
+    max-width:1500px;
+    height:70%;
+    background-color:rgba(61, 61, 61, 0.301);
+    font-style: serif;
+    margin-left: 15%;
+    margin-right:auto;
+}
+
+.left-pic-par .gif {
+    float: left;
+    width: 30%;
+    padding: 2%;
+
+}
+
+.gif {
+    border-radius:10%;
+}
+
+.left-pic-par .title-paragraph {
+    float: right;
+    width: 50%;
+    padding: 4%;
+    font-family: "Work Sans", sans-serif;
+    color:darkslategray;
+}
+
+
+.sitefooter {
+    /* margin-top: 50%; */
+    bottom:0;
+    width: 100%;
+    height: 50px;
+    /* padding: 3rem; */
+    /* display: flex; */
+    position:fixed;
+    justify-content: center;
+    background: #063442;
+    color:white;
+}
+
+.bottom_buttons {
+    display:flex;
+    z-index: 2;
+    margin-left: auto; 
+    margin-right: 10px;
+    padding:1%;
+    bottom: 0;
+    height: 50px;
+    width: 200px;
+    background: #063442;
+    color:white;
+    text-align: center;
+
+}
+ 
+
+.float-child-left {
+    width: 30%;
+    float: left;
+    margin:auto;
+
+
+}
+
+.float-child-right {
+    width: 70%;
+    float: right;
+    margin:auto;
+
 }
