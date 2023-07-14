@@ -1,41 +1,93 @@
-.placeholder {
-    background-color: red;
-}
 
-.anotherClass {
-    background-color: lightseagreen;
-}
-
-.container {
-    background-color: lightblue;
-}
-
-.nav-link-wrapper {
-
-    background-color: palegoldenrod;
+.top {
+    display:inline-block;
+    width:70%;
+    max-width:1500px;
+    height:70%;
+    /*background-color:lightskyblue;*/
+    font-family: "Work Sans", sans-serif;
+    color:darkslategray;
+    margin-left: 15%;
+    margin-right:auto;
+    padding-top: 5%;
 
 }
 
-.nav-wrapper {
-    display:flex;
-    justify-content: space-between;
-    padding: 18px;
+
+.nameplate {
+    float: left;
+    padding-left:15%;
+    font-size:100px;
+    text-justify:auto;
+    width:30%;
 }
 
-.left-side {
-    display:flex;
+.profilepic {
+    float: right;
+    width:30%;
+    padding: 5%;
+    border-radius: 50%;
 }
 
-.nav-wrapper > .left-side > div {
-    padding: 5px;
-    margin-right: 20px;
-    text-transform: uppercase;
-    font-size: 0.9em;
+.left-pic-par {
+    border-radius:12px;
+    display:inline-block;
+    width:70%;
+    max-width:1500px;
+    height:70%;
+    max-height:800px;
+    background-color:rgba(61, 61, 61, 0.301);
+    font-style: serif;
+    margin-left: 15%;
+    margin-right:auto;
+    
 }
 
-.nav-link-wrapper {
-    height:22px;
-    border-bottom: 1px solid transparent;
-    transition: border-bottom 0.5s;
+.left-pic-par .gif {
+    float: left;
+    width: 30%;
+    padding: 2%;
 
+}
+
+.gif {
+    border-radius:10%;
+    border-width:1%;
+    border-color:white;
+}
+
+.page-top {
+    max-width:30%;
+    margin-left: auto;
+    margin-right:auto;
+    background-color:darkslategray;  
+
+}
+
+.page-name {
+    font-family: "Work Sans", sans-serif;
+    color:white;
+    text-align:center;
+    font-size:50px;
+}
+
+.left-pic-par .title-paragraph {
+    float: right;
+    width: 50%;
+    padding: 4%;
+    font-family: "Work Sans", sans-serif;
+    color:darkslategray;
+}
+
+
+.sitefooter {
+    /* margin-top: 50%; */
+    bottom:0;
+    width: 100%;
+    height: 50px;
+
+
+    justify-content: center;
+    background: #063442;
+    color:white;
 }
