@@ -3,7 +3,9 @@
 This website will serve as my portfolio and about page. Rather than using my GitHub page to serve as an entry way to my works, this website will make it easier to share my programming passion and academic projects.
 
 Here is a mockup of how the website may look:
-<img src="pictures/website-pic1" alt="Website top">
+<br></br>
+<img src="pictures/website-pic1.png" alt="Website top" width=70%>
+<img src="pictures/Screenshot 2023-07-13 at 9.27.24 PM.png" alt="Website panels" width=70%>
 
 ## User Stories
 
