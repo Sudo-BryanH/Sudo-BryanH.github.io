@@ -35,10 +35,12 @@
     width:70%;
     max-width:1500px;
     height:70%;
+    max-height:800px;
     background-color:rgba(61, 61, 61, 0.301);
     font-style: serif;
     margin-left: 15%;
     margin-right:auto;
+    
 }
 
 .left-pic-par .gif {
@@ -50,6 +52,23 @@
 
 .gif {
     border-radius:10%;
+    border-width:1%;
+    border-color:white;
+}
+
+.page-top {
+    max-width:30%;
+    margin-left: auto;
+    margin-right:auto;
+    background-color:darkslategray;  
+
+}
+
+.page-name {
+    font-family: "Work Sans", sans-serif;
+    color:white;
+    text-align:center;
+    font-size:50px;
 }
 
 .left-pic-par .title-paragraph {
@@ -66,41 +85,9 @@
     bottom:0;
     width: 100%;
     height: 50px;
-    /* padding: 3rem; */
-    /* display: flex; */
-    position:fixed;
+
+
     justify-content: center;
     background: #063442;
     color:white;
-}
-
-.bottom_buttons {
-    display:flex;
-    z-index: 2;
-    margin-left: auto; 
-    margin-right: 10px;
-    padding:1%;
-    bottom: 0;
-    height: 50px;
-    width: 200px;
-    background: #063442;
-    color:white;
-    text-align: center;
-
-}
- 
-
-.float-child-left {
-    width: 30%;
-    float: left;
-    margin:auto;
-
-
-}
-
-.float-child-right {
-    width: 70%;
-    float: right;
-    margin:auto;
-
 }
