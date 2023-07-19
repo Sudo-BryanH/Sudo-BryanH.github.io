@@ -1,21 +1,26 @@
 
 .top {
-    display:inline-block;
+
     width:70%;
     max-width:1500px;
     height:70%;
     /*background-color:lightskyblue;*/
     font-family: "Work Sans", sans-serif;
     color:darkslategray;
-    margin-left: 15%;
-    margin-right:auto;
+
     padding-top: 5%;
 
 }
 
+.container-fluid {
+    margin-left: auto;
+    margin-right: auto;
+    background-color:aliceblue;
+}
+
 
 .nameplate {
-    float: left;
+
     padding-left:15%;
     font-size:100px;
     text-justify:auto;
@@ -23,23 +28,36 @@
 }
 
 .profilepic {
-    float: right;
+    float:left;
+    max-width: 400px;
     width:30%;
     padding: 5%;
     border-radius: 50%;
 }
 
 .left-pic-par {
+
     border-radius:12px;
     display:inline-block;
-    width:70%;
-    max-width:1500px;
-    height:70%;
-    max-height:800px;
     background-color:rgba(61, 61, 61, 0.301);
     font-style: serif;
-    margin-left: 15%;
-    margin-right:auto;
+
+    margin-bottom:5%;
+    
+}
+.col-sm-6 {
+    margin:2%;
+    max-width:900px;
+
+}
+.right-pic-par {
+
+    border-radius:12px;
+    display:inline-block;
+    background-color:rgba(61, 61, 61, 0.301);
+    font-style: serif;
+
+    margin-bottom:5%;
     
 }
 
@@ -56,6 +74,14 @@
     border-color:white;
 }
 
+.right-pic-par .gif {
+    float: left;
+    width: 30%;
+    padding: 2%;
+
+}
+
+
 .page-top {
     max-width:30%;
     margin-left: auto;
@@ -67,11 +93,20 @@
 .page-name {
     font-family: "Work Sans", sans-serif;
     color:white;
-    text-align:center;
+    /*text-align:center;*/
     font-size:50px;
 }
 
 .left-pic-par .title-paragraph {
+    float: right;
+    width: 50%;
+    padding: 4%;
+    font-family: "Work Sans", sans-serif;
+
+    color:darkslategray;
+}
+
+.right-pic-par .title-paragraph {
     float: right;
     width: 50%;
     padding: 4%;
