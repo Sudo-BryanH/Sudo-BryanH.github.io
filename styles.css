@@ -36,7 +36,8 @@
 }
 
 .left-pic-par {
-
+    display:inline-block;
+    max-height: 800px;
     border-radius:12px;
     display:inline-block;
     background-color:rgba(61, 61, 61, 0.301);
@@ -45,13 +46,10 @@
     margin-bottom:5%;
     
 }
-.col-sm-6 {
-    margin:2%;
-    max-width:900px;
 
-}
 .right-pic-par {
-
+    display:inline-block;
+    max-height: 800px;
     border-radius:12px;
     display:inline-block;
     background-color:rgba(61, 61, 61, 0.301);
@@ -69,18 +67,24 @@
 }
 
 .gif {
+    object-fit: fill;
     border-radius:10%;
     border-width:1%;
     border-color:white;
 }
 
 .right-pic-par .gif {
+    
     float: left;
-    width: 30%;
+    width: 40%;
     padding: 2%;
 
 }
+.col-sm-6 {
+    margin:2%;
+    max-width:45%;
 
+}
 
 .page-top {
     max-width:30%;
@@ -97,22 +101,26 @@
     font-size:50px;
 }
 
-.left-pic-par .title-paragraph {
-    float: right;
-    width: 50%;
-    padding: 4%;
-    font-family: "Work Sans", sans-serif;
+.title-paragraph {
 
+
+    width: 50%;
+    height: 10%;
+    padding: 4%;
+    font-family: Work Sans, sans-serif;
+    overflow: auto;
     color:darkslategray;
 }
 
-.right-pic-par .title-paragraph {
-    float: right;
-    width: 50%;
-    padding: 4%;
-    font-family: "Work Sans", sans-serif;
-    color:darkslategray;
+.paragraph {
+
+    height: 100%;
+    overflow:hidden;
 }
+
+
+
+
 
 
 .sitefooter {
