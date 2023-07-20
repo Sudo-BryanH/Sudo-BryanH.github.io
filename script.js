@@ -1,6 +1,7 @@
 function f() {
-    console.log(document.getElementById("trial-button").textContent);
+    console.log(document.getElementById("projects-button").textContent);
 
-    $("<img class='gif' src='pictures/Volleyball Game Demo.gif' alt='gif'>").appendTo("#content-panel");
-
+    //document.getElementById("content-panel").innerHTML += "<img class='gif' src='pictures/Volleyball Game Demo.gif' alt='gif'>";
+    // TODO look at jQuery's .load() function
+    $("#content-panel").load("projects.html");
 }
