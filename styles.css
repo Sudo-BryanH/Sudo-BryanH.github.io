@@ -86,12 +86,14 @@
 
 }
 
-.page-top {
-    max-width:30%;
-    margin-left: auto;
-    margin-right:auto;
-    background-color:darkslategray;  
+.btn {
+    margin:10px;
+    
+}
 
+.top-buttons {
+    width:100%;
+    background-color:darkslategray;  
 }
 
 .page-name {
