@@ -17,7 +17,8 @@
     <script src="script.js" type="text/javascript"></script>
 </head>
 <body>
-    <div class="container-fluid top">
+    
+    <div class="top container-fluid">
         <div class="row">
             <div class="col-sm-7"><h1 class="nameplate">Bryan Hui</h1></div>
             <div class="col-sm-5"></div><img class="profilepic" src="pictures/whale54k.png" alt="whalepic"></div>
@@ -25,12 +26,14 @@
     </div>
 
     <hr>
-    <div class="top-buttons container-fluid">
-        <div class="row">
-            <button type="button" onclick="f()" class="col-xs-5 btn btn-dark" id="projects-button">My Projects</button>
-            
-            <button  type="button" class="col-xs-5 btn btn-dark" id="about-button"><i class="bi bi-info-circle"></i>About Me</button>
-            <!--TODO: make these into icons like apple page-->
+    <div class="buttons-bar">
+        <div class="container-fluid buttons-container">
+            <div class="row">
+                <button type="button" onclick="loadProjectsPage()" class="col-xs-6 btn" id="projects-button">My Projects</button>
+
+                <button  type="button" class="col-xs-6 btn" id="about-button"><i class="bi bi-info-circle"></i>About Me</button>
+                <!--TODO: make these into icons like apple page-->
+            </div>
         </div>
     </div>
     <main>

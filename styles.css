@@ -87,13 +87,21 @@
 }
 
 .btn {
-    margin:10px;
-    
+    background-color: darkslategray;
+    color: white;
 }
 
-.top-buttons {
+.buttons-bar {
+    justify-content:center;
     width:100%;
     background-color:darkslategray;  
+}
+
+.buttons-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    background-color:darkslategray; 
 }
 
 .page-name {
