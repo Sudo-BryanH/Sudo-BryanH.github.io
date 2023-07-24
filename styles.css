@@ -2,18 +2,8 @@
     --primary-accent:darkslategray;
     --accent-gray:#e3e3e3;
 }
-.about-top {
 
-    width:70%;
-    max-width:1500px;
-    height:70%;
-    /*background-color:lightskyblue;*/
-    font-family: "Work Sans", sans-serif;
-    color:var(--primary-accent);
-
-    padding-top: 5%;
-
-}
+/* Main page styles*/
 
 .container-fluid {
     margin-left: auto;
@@ -47,7 +37,6 @@
     color: white;
 }
 
-
 .image-container {
     width:100%;
     margin-left:auto;
@@ -63,20 +52,107 @@
 
 
 }
-.nameplate {
 
-    padding-left:15%;
-    font-size:100px;
-    text-justify:auto;
-    width:30%;
+.main-section {
+
+    border-radius: 100px;
 }
 
-.profilepic {
-    float:left;
-    max-width: 900px;
-    width:80%;
-    padding: 5%;
-    border-radius: 50%;
+/*Main page end*/
+
+
+/* Button Styles */
+.btn {
+    background-color: var(--primary-accent);
+    color: white;
+    border:solid;
+    border-radius:0;
+}
+
+.btn:hover {
+    background-color: white;
+    color: var(--primary-accent);
+}
+
+.btn:active .btn:focus {
+    background-color: white;
+}
+
+.btn-left-end {
+    border-radius: 40px 0 0 40px ;
+    border-left: solid;
+}
+
+.btn-right-end {
+    border-radius: 0 40px 40px 0;
+    border-right: solid;
+}
+
+.buttons-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    min-width: 300px;
+    padding-top:2%;
+
+}
+
+.buttons-container a {
+    color:var(--primary-accent);
+}
+
+/* Button styles end */
+
+/* About page styles */
+
+.about-page {
+    padding: 2%;
+}
+.qualifications {
+    float:right;
+    background-color: var(--accent-gray);
+    border-radius: 12px;
+    border-style: solid;
+    border-color: darkslategray;
+    border-width: 0 0 0 5px;
+    height: 500px;
+    max-width: 700px;
+
+}
+
+.q-lists {
+    border-style: solid;
+    border-color: var(--primary-accent);
+    border-width: 0 0 0 5px;
+
+}
+
+.skillset {
+    height: 100px;
+    overflow: auto;
+}
+
+
+/* About page styles end */
+
+
+
+.title-paragraph {
+
+    width: 50%;
+    height: 10%;
+    padding: 4%;
+    font-family: Work Sans, sans-serif;
+    overflow: auto;
+    color:darkslategray;
+}
+
+
+
+.paragraph {
+
+    height: 100%;
+    overflow:hidden;
 }
 
 .left-pic-par {
@@ -90,6 +166,8 @@
     margin-bottom:5%;
     
 }
+
+
 
 .right-pic-par {
     display:inline-block;
@@ -124,94 +202,6 @@
     padding: 2%;
 
 }
-
-/* Button Styles */
-.btn {
-    background-color: var(--primary-accent);
-    color: white;
-    border:solid;
-    border-radius:0;
-}
-
-.btn:hover {
-    background-color: white;
-    color: var(--primary-accent);
-}
-
-.btn:active .btn:focus {
-    background-color: white;
-}
-
-.btn-left-end {
-    border-radius: 40px 0 0 40px ;
-    border-left: solid;
-}
-
-.btn-right-end {
-    border-radius: 0 40px 40px 0;
-    border-right: solid;
-}
-
-.buttons-container {
-    margin-left: auto;
-    margin-right: auto;
-    width: 25%;
-    min-width: 300px;
-
-}
-
-/* Button styles end */
-
-/* About page styles */
-
-.about-page {
-    padding: 2%;
-}
-.qualifications {
-    background-color: var(--accent-gray);
-    border-radius: 12px;
-    border-style: solid;
-    border-color: darkslategray;
-    border-width: 0 0 0 5px;
-    height: 500px;
-
-
-}
-
-.q-lists {
-    border-style: solid;
-    border-color: var(--primary-accent);
-    border-width: 0 0 0 5px;
-}
-
-.skillset {
-    height: 100px;
-    overflow: auto;
-}
-
-
-/* About page styles end */
-
-
-
-.title-paragraph {
-
-    width: 50%;
-    height: 10%;
-    padding: 4%;
-    font-family: Work Sans, sans-serif;
-    overflow: auto;
-    color:darkslategray;
-}
-
-
-
-.paragraph {
-
-    height: 100%;
-    overflow:hidden;
-}
-
 /* Projects page styles end */
 
 
