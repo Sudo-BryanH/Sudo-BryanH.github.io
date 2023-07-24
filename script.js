@@ -2,13 +2,19 @@ function loadProjectsPage() {
     console.log(document.getElementById("projects-button").textContent);
 
     // TODO look at jQuery's .load() function
-
+    clearAllTopButton();
+    $("#projects-button").css("background-color", "white");
+    $("#projects-button").css("color", "var(--primary-accent)");
+    $("#content-panel").empty();
     $("#content-panel").load("projects.html");
 }
 
-function about() {
+function loadAboutPage() {
     console.log(document.getElementById("about-button").textContent);
 
+    clearAllTopButton();
+    $("#about-button").css("background-color", "white");
+    $("#about-button").css("color", "var(--primary-accent)");
     $("#content-panel").empty();
     $("#content-panel").load("about.html");
 }
@@ -17,7 +23,7 @@ function sdev() {
     console.log(document.getElementById("sdev").textContent);
     let html_ = "<b>Languages: </b>C/C++, Java, Python"+
     "<li>Object Oriented Programming/Design</li>"+ 
-    " <li>Unit-testing</li>"+
+    " <li>Unit-testing using JUnit 5 and Catch2</li>"+
     "<li>Test-first development</li>" +
     "<li>Data structures and algorithms</li>" +
     "<li>Design patterns*</li>"
@@ -87,4 +93,13 @@ function clearAllQButton() {
 
     $("#sdev").css("background-color", "var(--primary-accent)");
     $("#sdev").css("color", "white");
+}
+
+function clearAllTopButton() {
+    $("#about-button").css("background-color", "var(--primary-accent)");
+    $("#about-button").css("color", "white");
+
+    $("#projects-button").css("background-color", "var(--primary-accent)");
+    $("#projects-button").css("color", "white");
+
 }
