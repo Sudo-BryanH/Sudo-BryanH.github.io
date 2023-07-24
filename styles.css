@@ -1,4 +1,6 @@
-
+:root {
+    --primary-accent:darkslategray;
+}
 .about-top {
 
     width:70%;
@@ -6,7 +8,7 @@
     height:70%;
     /*background-color:lightskyblue;*/
     font-family: "Work Sans", sans-serif;
-    color:darkslategray;
+    color:var(--primary-accent);
 
     padding-top: 5%;
 
@@ -87,37 +89,44 @@
 }
 
 .btn {
-    background-color: darkslategray;
+    background-color: var(--primary-accent);
     color: white;
+    border:solid;
     border-radius:0;
 }
 
 .btn:hover {
-    color:cyan;
+    background-color: white;
+    color: var(--primary-accent);
 }
 
-.btn:active {
+.btn:active .btn:focus {
     background-color: white;
 }
 
-.buttons-bar {
-    justify-content:center;
-    width:100%;
-    background-color:darkslategray;  
+.btn-left-end {
+    border-radius: 40px 0 0 40px ;
+    border-left: solid;
+}
+
+.btn-right-end {
+    border-radius: 0 40px 40px 0;
+    border-right: solid;
 }
 
 .buttons-container {
     margin-left: auto;
     margin-right: auto;
     width: 30%;
-    background-color:darkslategray; 
+
+
 }
 
 .page-name {
     font-family: "Work Sans", sans-serif;
     color:white;
     /*text-align:center;*/
-    background-color:darkslategray; 
+    background-color:var(--primary-accent); 
     width: 30%;
     max-width:400px;
     font-size:50px;
@@ -136,7 +145,7 @@
 
 .q-lists {
     border-style: solid;
-    border-color: darkslategray;
+    border-color: var(--primary-accent);
     border-width: 0 0 0 5px;
 }
 
@@ -161,7 +170,6 @@
 
 
 
-
 .sitefooter {
     /* margin-top: 50%; */
     bottom:0;
@@ -170,6 +178,6 @@
 
 
     justify-content: center;
-    background: #063442;
+    background-color: var(--primary-accent);
     color:white;
 }

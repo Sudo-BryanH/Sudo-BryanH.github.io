@@ -18,11 +18,19 @@
 
 </head>
 <body>
-        <div class="buttons-bar">
+
+    <div class="about-top container-fluid">
+        <div class="row">
+            <div class="col-sm-7"><h1 class="nameplate">Bryan Hui</h1></div>
+            <div class="col-sm-5"></div><img class="profilepic" src="pictures/whale54k.png" alt="whalepic"></div>
+        </div>
+    </div>
+
+        <div>
         <div class="container-fluid buttons-container">
             <div class="row">
-                <button  type="button" onclick="about()" class="col-xs-6 btn" id="about-button"><i class="bi bi-info-circle"></i>About Me</button>
-                <button type="button" onclick="loadProjectsPage()" class="col-xs-6 btn" id="projects-button">My Projects</button>
+                <button  type="button" onclick="about()" class="col-xs-6 btn btn-left-end" id="about-button"><h3>About Me</h3></button>
+                <button type="button" onclick="loadProjectsPage()" class="col-xs-6 btn btn-right-end" id="projects-button"><h3>My Projects</h3></button>
                 <!--TODO: make these into icons like apple page-->
             </div>
         </div>
