@@ -5,3 +5,11 @@ function loadProjectsPage() {
 
     $("#content-panel").load("projects.html");
 }
+
+function about() {
+    console.log(document.getElementById("about-button").textContent);
+
+    $("#content-panel").empty();
+    $("#content-panel").load("about.html");
+}
+
