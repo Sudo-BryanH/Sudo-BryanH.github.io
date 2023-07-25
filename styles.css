@@ -153,10 +153,16 @@
 /* Projects page styles */
 
 .project-container {
-    padding:2%;
-    margin-left:auto;
-    margin-right:auto;
-    max-width:1200px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  width:80%;
+  max-width: 2400px;
+  margin: 0 auto;
+  padding: 20px 10px;
 }
 
 .project-name h3{
@@ -165,24 +171,16 @@
 
 .project-preview {
     background-color: var(--accent-gray);
-    border-radius: 12px;
-    /*border-style: solid;
-    border-color: darkslategray;
-    border-width: 0 0 0 5px;*/
-    height: 420px;
-    max-width: 800px;
-
-    
-}
-
-.gx-3 {
-    background-color: green;
+  width: 100%;
+  max-width: 420px;
+  height: 420px;
+  border-radius: 12px;
 }
 
 .thumbnail {
 
     border-radius: 12px;
-    margin-top: 15px;
+
 }
 
 .project-text {
@@ -191,7 +189,7 @@
 
 .thumbnail img {
     width: 100%;
-    max-height:250px;
+    height:250px;
     border-radius: 10px;
     object-fit: cover;
 }

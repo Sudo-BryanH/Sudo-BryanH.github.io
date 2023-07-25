@@ -103,3 +103,7 @@ function clearAllTopButton() {
     $("#projects-button").css("color", "white");
 
 }
+
+function goToLink(link) {
+    window.location.href = link;
+}
