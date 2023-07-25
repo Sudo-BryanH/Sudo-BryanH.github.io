@@ -7,44 +7,53 @@
         href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Work+Sans:wght@100..900&display=swap"
         rel="stylesheet"
     />
-    
-    
-    <title>Projects</title>
+    <link rel="stylesheet" href="path/to/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <title>Bryan Hui's Website</title>
     <link rel="stylesheet" href = "styles.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="script.js" type="text/javascript"></script>
 </head>
 <body>
-<div class="container-fluid">
-    <div class="row">
-<button class="col-sm-6 left-pic-par">
-   <img class="gif" src="pictures/Volleyball Game Demo.gif" alt="gif">
-   <article class="title-paragraph">
-        <h2 class="heading1">Volleyball Game</h2>
-        <ul>
-        <li>Developed from January to April 2022</li>
-        <li>Written using Java, Graphics made using Java Swing library</li>
-        <a href="https://github.com/Sudo-BryanH/Volleyball-Game">GitHub Page</a>
-        </ul>
-        <p class="paragraph">
-            I am a huge fan of volleyball, even if I don't play on any serious level myself. I have always considered volleyball to be simple but after doing research, I found the complex strategies to be fascinating. Therefore, this game requires some level of volleyball strategy and intuition, as well as a bit of luck. 
-            In this game, players will be able to simulate a simplified version of volleyball. Users can choose their own teams with their own teams with players of varying traits as well as how the team will attack or defend their court. They will play against a few already made bots which have their own level of difficulty and playing tendencies. Users who want a game that is tedious, challenging but rewarding game will enjoy this game.</p>
-    </article>
-</button>
-<button class="col-sm-6 right-pic-par">
-    <img class="gif" src="pictures/Volleyball Game Demo.gif" alt="gif">
-    <div class="title-paragraph">
-         <h2 class="heading1">Volleyball Game</h2>
-         <ul>
-         <li>Developed from January to April 2022</li>
-         <li>Written using Java, Graphics made using Java Swing library</li>
-         <a href="https://github.com/Sudo-BryanH/Volleyball-Game">GitHub Page</a>
-         </ul>
-         <p class="paragraph">
-             I am a huge fan of volleyball, even if I don't play on any serious level myself. I have always considered volleyball to be simple but after doing research, I found the complex strategies to be fascinating. Therefore, this game requires some level of volleyball strategy and intuition, as well as a bit of luck. 
-             In this game, players will be able to simulate a simplified version of volleyball. Users can choose their own teams with their own teams with players of varying traits as well as how the team will attack or defend their court. They will play against a few already made bots which have their own level of difficulty and playing tendencies. Users who want a game that is tedious, challenging but rewarding game will enjoy this game.</p>
-         </div>
- </button>
-</div>
+<!-- the container of all the project previews-->
+<div class="container-fluid project-container">
+    <div class="row gx-3">
+
+        <!--A single project preview starts-->
+        <div class="col-md-6 project-preview">
+            <button class="thumbnail"><img src="pictures/Volleyball Game Demo.gif" alt="gif"></button>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-9 project-name"><h3>Volleyball Game</h3></div>
+                    <div class="col-lg-3 project-text">Jan-Apr 2022</div>
+                </div>
+                <hr>
+                <div class="row">
+                    <button type="button" href="https://github.com/Sudo-BryanH/Volleyball-Game" class="col-xs-6 btn btn-left-end" id="sdev"><i class="bi bi-github"></i> GitHub Repo</button>
+                    <button type="button" onclick="" class="col-xs-6 btn btn-right-end" id="sdev">See More <i class="bi bi-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+        <!-- project ends-->
+        <!--A single project preview starts-->
+        <div class="col-md-6 project-preview">
+            <button class="thumbnail"><img src="pictures/Database_demo1.gif" alt="gif"></button>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-9 project-name"><h3>Streaming Service Database</h3></div>
+                    <div class="col-lg-3 project-text">Jan-Apr 2023</div>
+                </div>
+                <hr>
+                <div class="row">
+                    <button type="button" href="https://github.com/Sudo-BryanH/Volleyball-Game" class="col-xs-6 btn btn-left-end" id="sdev"><i class="bi bi-github"></i> GitHub Repo</button>
+                    <button type="button" onclick="" class="col-xs-6 btn btn-right-end" id="sdev">See More <i class="bi bi-arrow-right"></i></button>
+ 
+                </div>
+            </div>
+        </div>
+        <!-- project ends-->
+
+
+    </div>
 </div>
 </body>
