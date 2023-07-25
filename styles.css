@@ -1,45 +1,198 @@
+:root {
+    --primary-accent:darkslategray;
+    --accent-gray:#e3e3e3;
+}
 
-.top {
-    display:inline-block;
-    width:70%;
-    max-width:1500px;
-    height:70%;
-    /*background-color:lightskyblue;*/
-    font-family: "Work Sans", sans-serif;
-    color:darkslategray;
-    margin-left: 15%;
+/* Main page styles*/
+
+.container-fluid {
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.slideshow {
+    background-color: #222224;
+    background-image: url("pictures/whale54k.png");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.topbar {
+    position:absolute;
+    height: 50px;
+    width: 100%;
+
+}
+
+.topbar h3 {
+    color: white;
+}
+
+.image-container {
+    width:100%;
+    margin-left:auto;
     margin-right:auto;
-    padding-top: 5%;
+    
+}
+
+.slideshow-pic {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+
+
 
 }
 
 
-.nameplate {
-    float: left;
-    padding-left:15%;
-    font-size:100px;
-    text-justify:auto;
-    width:30%;
+/*Main page end*/
+
+
+/* Button Styles */
+.btn {
+    background-color: var(--primary-accent);
+    color: white;
+    border:solid;
+    border-radius:0;
 }
 
-.profilepic {
-    float: right;
-    width:30%;
-    padding: 5%;
-    border-radius: 50%;
+.btn:hover {
+    background-color: white;
+    color: var(--primary-accent);
+}
+
+.btn:active .btn:focus {
+    background-color: white;
+}
+
+.btn-left-end {
+    border-radius: 40px 0 0 40px ;
+    border-left: solid;
+}
+
+.btn-right-end {
+    border-radius: 0 40px 40px 0;
+    border-right: solid;
+}
+
+.buttons-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    min-width: 300px;
+    padding-top:2%;
+
+}
+
+.buttons-container a {
+    color:var(--primary-accent);
+}
+
+.buttons-container a:hover {
+    color: var(--accent-gray);
+}
+
+/* Button styles end */
+
+/* About page styles */
+
+.about-page {
+    padding: 2%;
+    margin-left:auto;
+    margin-right:auto;
+    max-width:1200px;
+
+}
+.qualifications {
+
+    background-color: var(--accent-gray);
+    border-radius: 12px;
+    border-style: solid;
+    border-color: darkslategray;
+    border-width: 0 0 0 5px;
+    height: 500px;
+    max-width: 700px;
+
+}
+
+.q-lists {
+    border-style: solid;
+    border-color: var(--primary-accent);
+    border-width: 0 0 0 5px;
+
+}
+
+.skillset {
+    height: 100px;
+    overflow: auto;
+}
+
+.self-intro {
+
+    border-radius: 12px;
+    border-width: 0 0 0 5px;
+    height: 500px;
+    max-width: 700px;
+}
+
+.self-intro p {
+    text-justify: auto;
+}
+
+/* About page styles end */
+
+
+
+.title-paragraph {
+
+    width: 50%;
+    height: 10%;
+    padding: 4%;
+    font-family: Work Sans, sans-serif;
+    overflow: auto;
+    color:darkslategray;
+}
+
+
+
+.paragraph {
+
+    height: 100%;
+    overflow:hidden;
 }
 
 .left-pic-par {
+    display:inline-block;
+    max-height: 800px;
     border-radius:12px;
     display:inline-block;
-    width:70%;
-    max-width:1500px;
-    height:70%;
-    max-height:800px;
-    background-color:rgba(61, 61, 61, 0.301);
+    background-color: var(--accent-gray);
     font-style: serif;
-    margin-left: 15%;
-    margin-right:auto;
+
+    margin-bottom:5%;
+    
+}
+
+
+
+.right-pic-par {
+    display:inline-block;
+    max-height: 800px;
+    border-radius:12px;
+    display:inline-block;
+    background-color: var(--accent-gray);
+    font-style: serif;
+
+    margin-bottom:5%;
     
 }
 
@@ -51,33 +204,20 @@
 }
 
 .gif {
+    object-fit: fill;
     border-radius:10%;
     border-width:1%;
     border-color:white;
 }
 
-.page-top {
-    max-width:30%;
-    margin-left: auto;
-    margin-right:auto;
-    background-color:darkslategray;  
+.right-pic-par .gif {
+    
+    float: left;
+    width: 40%;
+    padding: 2%;
 
 }
-
-.page-name {
-    font-family: "Work Sans", sans-serif;
-    color:white;
-    text-align:center;
-    font-size:50px;
-}
-
-.left-pic-par .title-paragraph {
-    float: right;
-    width: 50%;
-    padding: 4%;
-    font-family: "Work Sans", sans-serif;
-    color:darkslategray;
-}
+/* Projects page styles end */
 
 
 .sitefooter {
@@ -88,6 +228,6 @@
 
 
     justify-content: center;
-    background: #063442;
+    background-color: var(--primary-accent);
     color:white;
 }
