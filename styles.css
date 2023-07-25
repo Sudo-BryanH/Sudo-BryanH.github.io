@@ -14,7 +14,6 @@
 .slideshow {
     background-color: #222224;
     background-image: url("pictures/whale54k.png");
-
   /* Set a specific height */
   min-height: 500px; 
 
@@ -23,6 +22,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
 
 }
 
