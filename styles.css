@@ -53,10 +53,6 @@
 
 }
 
-.main-section {
-
-    border-radius: 100px;
-}
 
 /*Main page end*/
 
@@ -101,15 +97,23 @@
     color:var(--primary-accent);
 }
 
+.buttons-container a:hover {
+    color: var(--accent-gray);
+}
+
 /* Button styles end */
 
 /* About page styles */
 
 .about-page {
     padding: 2%;
+    margin-left:auto;
+    margin-right:auto;
+    max-width:1200px;
+
 }
 .qualifications {
-    float:right;
+
     background-color: var(--accent-gray);
     border-radius: 12px;
     border-style: solid;
@@ -132,6 +136,17 @@
     overflow: auto;
 }
 
+.self-intro {
+
+    border-radius: 12px;
+    border-width: 0 0 0 5px;
+    height: 500px;
+    max-width: 700px;
+}
+
+.self-intro p {
+    text-justify: auto;
+}
 
 /* About page styles end */
 
