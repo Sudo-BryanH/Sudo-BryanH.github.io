@@ -101,6 +101,12 @@
     color: var(--accent-gray);
 }
 
+.project-buttons {
+    width:100%;
+    padding-top:0%;
+}
+
+
 /* Button styles end */
 
 /* About page styles */
@@ -175,6 +181,7 @@
   max-width: 420px;
   height: 420px;
   border-radius: 12px;
+
 }
 
 .thumbnail {
