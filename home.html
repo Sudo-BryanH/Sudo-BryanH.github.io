@@ -4,7 +4,9 @@
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
     <link       
         href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Work+Sans:wght@100..900&display=swap"
         rel="stylesheet"
@@ -22,28 +24,8 @@
     <!--topbar-->
     <div class="topbar container-fluid">
         <div class="row">
-            <div class="col-sm-9"><h3>Bryan Hui</h3></div>
-                <div class="col-sm-3 container-fluid"> </div>
-        </div>
-    </div>
-
-    <!--slideshow-->
-    <div class="slideshow"></div>
-
-
-   <main class="main-section">
-    <!-- content picker button-->
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-4"></div>
-            <div class="col-lg-4 container-fluid buttons-container">
-                <div class="row">
-                    <button  type="button" onclick="loadAboutPage()" class="col-xs-6 btn btn-left-end" id="about-button"><h3>About Me</h3></button>
-                    <button type="button" onclick="loadProjectsPage()" class="col-xs-6 btn btn-right-end" id="projects-button"><h3>Projects</h3></button>
-
-                </div>
-            </div>
-            <div class="col-lg-4 container-fluid buttons-container">
+            <div class=col-xs-8><h3>Bryan Hui</h3></div>
+            <div class="col-xs-4 buttons-container">
                 <div class="row">
                     <div class="col-xs-4"></div>
                     <a href="https://github.com/Sudo-BryanH" class="col-xs-2"><h3><i class="bi bi-github"></i></h3></a>
@@ -51,9 +33,27 @@
                     <a href="" class="col-xs-2"><h3><i class="bi bi-envelope"></i></h3></a>
                     <a href="projects.html" class="col-xs-2"><h3><i class="bi bi-dice-4"></i></h3></a>
                 </div>
-            </div>        
+            </div>   
+    
         </div>
     </div>
+
+    <!--slideshow-->
+    <div class="slideshow">
+        <img class="slideshow-pic" src="pictures/whale54k.png">
+    </div>
+
+        <!-- content picker button-->
+    <div class="buttons-container content-picker">
+
+        <button  type="button" onclick="loadAboutPage()" class="col-md-6 btn btn-left-end" id="about-button"><h3>About Me</h3></button>
+        <button type="button" onclick="loadProjectsPage()" class="col-md-6 btn btn-right-end" id="projects-button"><h3>Projects</h3></button>
+
+    </div>
+
+
+   <main class="main-section">
+
     <!-- content panel-->
  
     <div class="content-panel container-fluid" id="content-panel">

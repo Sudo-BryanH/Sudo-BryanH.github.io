@@ -12,29 +12,22 @@
 }
 
 .slideshow {
+
+    top:0;
     background-color: #222224;
-    background-image: url("pictures/whale54k.png");
-  /* Set a specific height */
-  min-height: 500px; 
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-
 }
 
 .topbar {
-    position:absolute;
-    height: 50px;
-    width: 100%;
+    background-color: rgba(34, 34, 36, 0.9);
+    position: sticky;
+    top:0;
+
 
 }
 
 .topbar h3 {
     color: white;
+    padding-top:1%;
 }
 
 .image-container {
@@ -51,7 +44,9 @@
 
 
 
+
 }
+
 
 
 /*Main page end*/
@@ -89,7 +84,7 @@
     margin-right: auto;
     width: 30%;
     min-width: 300px;
-    padding-top:2%;
+    padding-top:1%;
 
 }
 
@@ -106,6 +101,10 @@
     padding-top:0%;
 }
 
+.overlay {
+    position:fixed;
+    display:none;
+}
 
 /* Button styles end */
 
