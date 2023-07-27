@@ -1,5 +1,5 @@
 :root {
-    --primary-accent:rgb(28, 183, 175);
+    --primary-accent:rgb(42, 115, 121);
     --accent-gray:#e3e3e3;
     --accent-dark-gray:#222224;
 
@@ -197,28 +197,60 @@ body {
     width: 100%;
     height:250px;
     border-radius: 12px;
-
+    position:relative;
 }
 
 .project-text {
     font-size: 16px;
+    text-align: center;
 }
 
-.thumbnail img {
+.project-date {
+    background-color: var(--primary-accent);
+    color: white;
+    border:solid;
+    border-radius:20px;
+    max-width: 200px;
+
+}
+
+.thumbnail img, video { 
     width: 100%;
     height:240px;
     border-radius: 10px;
     object-fit: cover;
 }
 
-.thumbnail video {
+
+.blur-img {
+    filter:blur(6px);
+}
+
+.overlay {
+    padding:2%;
     width: 100%;
     height:240px;
     border-radius: 10px;
-    object-fit: cover;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    display:none;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.6); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    overflow:auto;
 }
 
+.overlay li, h4{
+    text-align:left;
+    color: white;
+}
 
+.name-date {
+
+}
 
 /* Projects page styles end */
 

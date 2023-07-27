@@ -21,19 +21,33 @@
 
         <!--A single project preview starts-->
         <div class="project-preview">
-            <button class="thumbnail">
-                <video autoplay muted loop id="vball_thumbnail">
-                    <source src="pictures/Volleyball_game_demo.mp4" type="video/mp4">
+            <button class="thumbnail" onmouseenter="overlayOn('E323_thumbnail')" onmouseleave="overlayOff('E323_thumbnail')">
+                <div class="overlay" id="E323_thumbnail">
+                    <h4>A Data Science Project</h4>
+                    <h4>Skills and Technologies Used:</h4>
+                    <li>Python</li>
+                    <li>NumPy</li>
+                    <li>pandas</li>
+                    <li>scikit-learn</li>
+                    <li>Bokeh</li>
+                    <li>Jupyter Notebook</li>
+                    <li>Logistic regression</li>
+                    <li>Data modification and cleaning </li>
+                    
+                </div>
+                <video autoplay="autoplay" muted loop>
+                    <source src="pictures/E323_demo.mp4" type="video/mp4">
                 </video>
             </button>
-            <div class="container-fluid">
+            <div class="container-fluid name-date">
                 <div class="row">
-                    <div class="col-lg-8 project-name"><h3>Volleyball Game</h3></div>
-                    <div class="col-lg-4 project-text">Jan-Apr 2022</div>
+                    <div class="col-lg-7 project-name"><h3>Predicting Bankruptcy</h3></div>
+                    <div class="col-lg-4 project-text project-date">Jan-Apr 2023</div>
+                    <div class="col-lg-1"></div>
                 </div>
                 <hr>
                 <div class="row buttons-container project-buttons">
-                    <button type="button" onclick="goToLink('https://github.com/Sudo-BryanH/Volleyball-Game')"" class="col-xs-6 btn btn-left-end"><i class="bi bi-github"></i> GitHub Repo</button>
+                    <button type="button" onclick="goToLink('https:https://github.com/Sudo-BryanH/Data-Science-Project-Predicitng-Bankruptcy')"" class="col-xs-6 btn btn-left-end"><i class="bi bi-github"></i> GitHub Repo</button>
                     <button type="button" onclick="" class="col-xs-6 btn btn-right-end">See More <i class="bi bi-arrow-right"></i></button>
                 </div>
             </div>
@@ -41,16 +55,28 @@
         <!-- project ends-->
         <!--A single project preview starts-->
         <div class="project-preview">
-            <button class="thumbnail">
-                <video autoplay muted loop id="Database_thumbnail">
+            <button class="thumbnail" onmouseenter="overlayOn('Database_thumbnail')" onmouseleave="overlayOff('Database_thumbnail')">
+                <div class="overlay" id="Database_thumbnail"><h4 class="text-center">
+                    <h4>A Database and Software Development Project</h4>
+                    <hr>
+                    <h4>Skills and Technologies Used</h4>
+                    <li>SQL</li>
+                    <li>MySQL</li>
+                    <li>JDBC</li>
+                    <li>Relational Database Design</li>
+                    <li>ER-Diagrams</li>
+                    <li>Normalization</li>
+                </div>
+                <video autoplay muted loop>
                     <source src="pictures/Database_demo2.mp4" type="video/mp4">
 
                 </video>
             </button>
-            <div class="container-fluid">
+            <div class="container-fluid name-date">
                 <div class="row">
-                    <div class="col-lg-8 project-name"><h3>Streaming Service Database</h3></div>
-                    <div class="col-lg-4 project-text">Jan-Apr 2023</div>
+                    <div class="col-lg-7 project-name"><h3>Streaming Service Database</h3></div>
+                    <div class="col-lg-4 project-text project-date">Jan-Apr 2023</div>
+                    <div class="col-lg-1"></div>
                 </div>
                 <hr>
                 <div class="row buttons-container project-buttons">
@@ -61,43 +87,31 @@
             </div>
         </div>
         <!-- project ends-->
-
-        <!--A single project preview starts-->
+                <!--A single project preview starts-->
         <div class="project-preview">
-            <button class="thumbnail">
-                <video autoplay muted loop id="vball_thumbnail">
-                    <source src="pictures/Volleyball_game_demo.mp4" type="video/mp4">
-                </video>
+            <button class="thumbnail" onmouseenter="overlayOn('Ride_Thumbnail')" onmouseleave="overlayOff('Ride_Thumbnail')">
+                <div class="overlay" id="Ride_Thumbnail">
+                    <h4>A Software Development Project</h4>
+                    <hr>
+                    <h4>Skills and Technologies Used:</h4>
+                    <li>C++</li>
+                    <li>Git/GitHub</li>
+                    <li>Catch2 for unit-testing</li>
+                    <li>Use of Data Structures like Hashmaps and Linked Lists</li>
+                    <li>GDB</li>
+                    
+                </div>
+                <img class="blur-img" src="pictures/whale54k.png">
             </button>
-            <div class="container-fluid">
+            <div class="container-fluid name-date">
                 <div class="row">
-                    <div class="col-lg-8 project-name"><h3>Volleyball Game</h3></div>
-                    <div class="col-lg-4 project-text">Jan-Apr 2022</div>
+                    <div class="col-lg-7 project-name"><h3>Ride Planning Program</h3></div>
+                    <div class="col-lg-4 project-text project-date">Dec 2022-Feb 2023</div>
+                    <div class="col-lg-1"></div>
                 </div>
                 <hr>
                 <div class="row buttons-container project-buttons">
-                    <button type="button" onclick="goToLink('https://github.com/Sudo-BryanH/Volleyball-Game')"" class="col-xs-6 btn btn-left-end"><i class="bi bi-github"></i> GitHub Repo</button>
-                    <button type="button" onclick="" class="col-xs-6 btn btn-right-end">See More <i class="bi bi-arrow-right"></i></button>
-                </div>
-            </div>
-        </div>
-        <!-- project ends-->
-        <!--A single project preview starts-->
-        <div class="project-preview">
-            <button class="thumbnail">
-                <video autoplay muted loop id="Database_thumbnail">
-                    <source src="pictures/Database_demo2.mp4" type="video/mp4">
-
-                </video>
-            </button>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-8 project-name"><h3>Streaming Service Database</h3></div>
-                    <div class="col-lg-4 project-text">Jan-Apr 2023</div>
-                </div>
-                <hr>
-                <div class="row buttons-container project-buttons">
-                    <button type="button" onclick="goToLink('https://github.com/Sudo-BryanH/Streaming-Service-Database')" class="col-xs-6 btn btn-left-end"><i class="bi bi-github"></i> GitHub Repo</button>
+                    <button type="button" onclick="goToLink('https://github.com/Sudo-BryanH/Ride-Planning')" class="col-xs-6 btn btn-left-end"><i class="bi bi-github"></i> GitHub Repo</button>
                     <button type="button" onclick="" class="col-xs-6 btn btn-right-end">See More <i class="bi bi-arrow-right"></i></button>
  
                 </div>
@@ -107,15 +121,27 @@
 
         <!--A single project preview starts-->
         <div class="project-preview">
-            <button class="thumbnail">
-                <video autoplay muted loop id="vball_thumbnail">
+            <button class="thumbnail" onmouseenter="overlayOn('vball_thumbnail')" onmouseleave="overlayOff('vball_thumbnail')">
+                <div class="overlay" id="vball_thumbnail">
+                    <h4>A Software Development Project</h4>
+                    <hr>
+                    <h4>Skills and Technologies Used</h4>
+                    <li>Java</li>
+                    <li>Git/GitHub</li>
+                    <li>JUnit5 for unit-testing</li>
+                    <li>Java Swing for UI</li>
+                    <li>JSON parsing</li>
+                    <li>Singleton Design Pattern</li>
+                </div>
+                <video autoplay muted loop>
                     <source src="pictures/Volleyball_game_demo.mp4" type="video/mp4">
                 </video>
             </button>
-            <div class="container-fluid">
+            <div class="container-fluid name-date">
                 <div class="row">
-                    <div class="col-lg-8 project-name"><h3>Volleyball Game</h3></div>
-                    <div class="col-lg-4 project-text">Jan-Apr 2022</div>
+                    <div class="col-lg-7 project-name"><h3>Volleyball Game</h3></div>
+                    <div class="col-lg-4 project-text project-date">Jan-Apr 2022</div>
+                    <div class="col-lg-1"></div>
                 </div>
                 <hr>
                 <div class="row buttons-container project-buttons">
@@ -125,28 +151,8 @@
             </div>
         </div>
         <!-- project ends-->
-        <!--A single project preview starts-->
-        <div class="project-preview">
-            <button class="thumbnail">
-                <video autoplay muted loop id="Database_thumbnail">
-                    <source src="pictures/Database_demo2.mp4" type="video/mp4">
 
-                </video>
-            </button>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-8 project-name"><h3>Streaming Service Database</h3></div>
-                    <div class="col-lg-4 project-text">Jan-Apr 2023</div>
-                </div>
-                <hr>
-                <div class="row buttons-container project-buttons">
-                    <button type="button" onclick="goToLink('https://github.com/Sudo-BryanH/Streaming-Service-Database')" class="col-xs-6 btn btn-left-end"><i class="bi bi-github"></i> GitHub Repo</button>
-                    <button type="button" onclick="" class="col-xs-6 btn btn-right-end">See More <i class="bi bi-arrow-right"></i></button>
- 
-                </div>
-            </div>
-        </div>
-        <!-- project ends-->
+
         
         
 

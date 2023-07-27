@@ -110,6 +110,11 @@ function goToLink(link) {
     window.location.href = link;
 }
 
+const darkLightMode = {
+    dark: false
+
+};
+
 function darkModeSwitch() {
     if (!darkLightMode.dark) {
         darkLightMode.dark = true;
@@ -128,8 +133,17 @@ function darkModeSwitch() {
     } 
 }
 
+function overlayOn(id) {
 
-const darkLightMode = {
-    dark: false
+    document.getElementById(id).style.display = "block";
 
-};
+    
+}
+
+function overlayOff(id) {
+
+    document.getElementById(id).style.display = "none";
+    
+}
+
+
