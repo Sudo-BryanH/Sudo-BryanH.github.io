@@ -182,6 +182,7 @@ body {
 
 .project-name h3{
     margin:0;
+    font-size:25px;
 }
 
 .project-preview {
@@ -206,12 +207,13 @@ body {
     text-align: center;
 }
 
-.project-date {
+.bubble-div {
     background-color: var(--primary-accent);
     color: white;
     border:solid;
     border-radius:20px;
     max-width: 200px;
+    width:40%;
 
 }
 
@@ -244,14 +246,19 @@ body {
     overflow:auto;
 }
 
-.overlay li, .overlay h4{
-    text-align:left;
+.overlay h4{
+    text-align:center;
     color: white;
 }
 
-.name-date {
-
+.skills-div {
+    background-color:white;
+    color: var(--primary-accent);
+    border-color: var(--primary-accent);
+    width: fit-content;
+    padding:2%;
 }
+
 
 /* Projects page styles end */
 
