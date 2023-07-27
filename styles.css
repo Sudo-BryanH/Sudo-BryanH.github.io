@@ -52,8 +52,19 @@ body {
 }
 
 
-
 /*Main page end*/
+
+/*text styles*/
+h2, h3, li, p, div, b, button {
+    font-family: "Work Sans", sans-serif;
+}
+
+li, div {
+    font-size: 16px;
+    font-weight: 300;
+}
+/* end text styles*/
+
 
 
 /* Button Styles */
