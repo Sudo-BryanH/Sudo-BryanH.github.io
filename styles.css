@@ -1,9 +1,15 @@
 :root {
     --primary-accent:rgb(28, 183, 175);
     --accent-gray:#e3e3e3;
+    --accent-dark-gray:#222224;
+
 }
 
 /* Main page styles*/
+
+body {
+    background-color: white;
+}
 
 .container-fluid {
     margin-left: auto;
@@ -14,21 +20,17 @@
 .slideshow {
 
     top:0;
-    background-color: #222224;
+    background-color: var(--accent-dark-gray);
 }
 
 .topbar {
-    background-color: rgba(34, 34, 36, 0.9);
+    background-color: var(--accent-dark-gray);
     position: sticky;
     top:0;
-
+    color:white;
 
 }
 
-.topbar h3 {
-    color: white;
-    padding-top:1%;
-}
 
 .image-container {
     width:100%;
@@ -84,16 +86,16 @@
     margin-right: auto;
     width: 30%;
     min-width: 300px;
-    padding-top:1%;
 
 }
 
-.buttons-container a {
-    color:var(--primary-accent);
+
+.contact-btn {
+    color: white;
 }
 
-.buttons-container a:hover {
-    color: var(--accent-gray);
+.contact-btn:hover {
+    color: var(--primary-accent);
 }
 
 .project-buttons {
@@ -104,6 +106,12 @@
 .overlay {
     position:fixed;
     display:none;
+}
+
+.content-btn {
+    margin-top:1%;
+    margin-bottom:1%;
+
 }
 
 /* Button styles end */

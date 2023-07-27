@@ -4,9 +4,7 @@
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-  </body>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>  </body>
     <link       
         href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Work+Sans:wght@100..900&display=swap"
         rel="stylesheet"
@@ -19,7 +17,7 @@
     <script src="script.js" type="text/javascript"></script>
 
 </head>
-<body>
+<body id="body">
 
     <!--topbar-->
     <div class="topbar container-fluid">
@@ -27,11 +25,12 @@
             <div class=col-xs-8><h3>Bryan Hui</h3></div>
             <div class="col-xs-4 buttons-container">
                 <div class="row">
-                    <div class="col-xs-4"></div>
-                    <a href="https://github.com/Sudo-BryanH" class="col-xs-2"><h3><i class="bi bi-github"></i></h3></a>
-                    <a href="https://www.linkedin.com/in/bryan-hui-4b8b3324b/" class="col-xs-2"><h3><i class="bi bi-linkedin"></i></h3></a>
-                    <a href="" class="col-xs-2"><h3><i class="bi bi-envelope"></i></h3></a>
-                    <a href="projects.html" class="col-xs-2"><h3><i class="bi bi-dice-4"></i></h3></a>
+                    <div class="col-xs-1"></div>
+                    <a href="https://github.com/Sudo-BryanH" class="col-xs-2"><h3><i class="bi bi-github  contact-btn"></i></h3></a>
+                    <a href="https://www.linkedin.com/in/bryan-hui-4b8b3324b/" class="col-xs-2"><h3><i class="bi bi-linkedin  contact-btn"></i></h3></a>
+                    <a href="" class="col-xs-2"><h3><i class="bi bi-envelope  contact-btn"></i></h3></a>
+                    <a href="projects.html" class="col-xs-2"><h3><i class="bi bi-dice-4  contact-btn"></i></h3></a>
+                    <a onclick="darkModeSwitch()" class="col-xs-2"><h3><i class="bi bi-moon contact-btn" id="dark-light"></i></h3></a>
                 </div>
             </div>   
     
@@ -44,7 +43,7 @@
     </div>
 
         <!-- content picker button-->
-    <div class="buttons-container content-picker">
+    <div class="buttons-container content-btn">
 
         <button  type="button" onclick="loadAboutPage()" class="col-md-6 btn btn-left-end" id="about-button"><h3>About Me</h3></button>
         <button type="button" onclick="loadProjectsPage()" class="col-md-6 btn btn-right-end" id="projects-button"><h3>Projects</h3></button>
