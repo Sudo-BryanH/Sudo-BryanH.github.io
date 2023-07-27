@@ -70,7 +70,7 @@ function webdev() {
 function dsci() {
     console.log(document.getElementById("dsci").textContent);
     let html_ = "<li><b>Libraries (Python): </b> NumPy, pandas, scikit-learn, Bokeh, Matplotlib<br></li>" +
-    "<li><b>Machine-learning Algorithms: </b> regression (logistic, lasso), classification (using ROC curves)</li>" +
+    "<li><b>Machine-learning Algorithms: </b> regression (linear, logistic, lasso), classification (using ROC curves)</li>" +
     "<li>Creation and cleaning of datasets using pandas</li>" +
     "<li>Perform mathematical calculations using NumPy</li>" +
     "<li>Plotting of data using pandas, Bokeh, and Matplotlib</li>" +
