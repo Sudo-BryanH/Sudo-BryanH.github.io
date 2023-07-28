@@ -65,15 +65,15 @@
     <main>
     <!--Introduction-->
     <div class="container-fluid portfolio-section">
-        <h1 class="title text-center">Introduction</h1>
-        <p class="text-center">I am a huge fan of volleyball, even if I don't play on any serious level myself. I have always considered volleyball to be simple but after doing research, I found the complex strategies to be fascinating.
-         Therefore, this game requires some level of volleyball strategy and intuition, as well as a bit of luck.<br> <br>
+        <h1 class="title">Introduction</h1>
+        <p><b>I am a huge fan of volleyball, even if I don't play on any serious level myself. I have always considered volleyball to be simple but after doing research, I found the complex strategies to be fascinating.
+         Therefore, this game requires some level of volleyball strategy and intuition, as well as a bit of luck.</b><br> <br>
         In this game, players will be able to simulate a simplified version of volleyball. Users can choose their own teams with their own teams with players of varying traits as well as how the team will attack or
-        defend their court. They will play against a few already made bots which have their own level of difficulty and playing tendencies. Users who want a game that is tedious, challenging but rewarding game will enjoy this game.
+        defend their court. They will play against a few already made bots which have their own level of difficulty and playing tendencies. Users who want a tedious, challenging but rewarding game will enjoy.
 
         </p>
-        <div class="flex-container">
-            <div class="portfolio-half qualifications">
+        <div class="flex-container width100">
+            <div class="portfolio-half empty-rec">
                 <h3>Instructions</h3>
                 <ol>
                     <li> If this is a new game, declare your players and any extra players you'd like on your roster</li>
@@ -86,7 +86,7 @@
                     <li>To end the game and save, press "Quit and Save"</li>
             </ol>
             </div>
-            <div class="portfolio-half qualifications">
+            <div class="portfolio-half gray-rec">
                 <h3>User Stories</h3>
                 <li>As a user, I should be able to create and add an arbitrary number of players to my teams</li>
                 <li>As a user, I should be able to choose which opposing team I want to play</li>
@@ -104,7 +104,66 @@
 
     <hr>
     <!--Planning-->
+    <div class="container-fluid portfolio-section">
+        <h1 class="title">Planning</h1>
+        <h2>Conceptual design and first drafts</h2>
+        <p>
+            <b>The first step was to have a working concept.</b> This involved a lot of conceptual drawings on how I expect the layout to work. 
+            Questions on how the game should be coded out and how objects in the game would be represented such as the ball, players, different types of players had to be answered. 
+            <br><br>
+            Eventually I settled with the idea of representing the ball, court, the game itself, the teams and players as classes, while individual teams 
+            and different player positions were concrete classes to the abstract team and player classes. The game will be made to run after declaring player numbers by running a function
+            that starts the game and goes through a list of steps it repeats throughout the game. The flow of the game would look something like:
+            <div class="flex-container width100">
+                <div class="portfolio-half empty-rec">
+                    <ol>
+                        <li> If this is a new game, declare your players and any extra players you'd like on your roster, otherwise start a recovered game</li>
+                        <li> A serve is made. The first serve is always received and goes to the setter</li>
+                        <li> The side with the ball chooses which player (position) to hit and where to hit the ball</li>
+                        <li> The side defending will move their players to guess where the opponent will hit the ball. If there is a defender where the ball lands, the ball is received.</li>
+                        <li> If the ball is received, the defender becomes the attacker and vice versa. If the ball is not received, the winning side will be awarded a point and will server next</li>
+                    </ol>
+                </div>
+                <img class="small-thumbnail" src="pictures/vball_planning/Sketch0.png">
+            </div>
+            I also knew that I would eventually make a UI so I thought it best to derive a grided layout on how I imagine the game would be. To reduce the amount
+            of variability I had to code out, I would have a standard position on the court for the players to move to. The following pictures are a rough draft 
+            I drew up on how I thought the court should look:
+            <div class="flex-container width100">
+                <img class="small-thumbnail" src="pictures/vball_planning/Sketch1.png">
+                <img class="small-thumbnail" src="pictures/vball_planning/Sketch2.png">
+                <img class="small-thumbnail" src="pictures/vball_planning/Sketch3.png">
+            
+            </div>
 
+            <b>With this in mind, I began coding.</b> I figured to start I should make this a console program to at least know the game worked (big mistake, but more on that later). 
+            The coding went pretty smoothly with only minor debugging problems to fix. Unit-testing ensured that each function by itself works. Before long, I had a functional terminal game which, 
+            while a hassle to play, was functional.
+
+        </p>
+
+        <h2>UI and concurrency pains</h2>
+        <p>
+        <b>My problems with this program did not really start until I started to implement a UI.</b> While I was able to get used to the Java Swing library to get my designs down, trying to 
+        connect it to my current game proved to be difficult. To start off with, there was some bug causing the screen to go white whenever the game ran the function to draw
+        the court. While I was never able to figure out why this did not work (and neither did the TA assisting me in that case), it was for the best because I had realized that trying 
+        to run a synchronus, linear program was not suited to work with Java Swing's event driven paradigm, and I had to redesign how the game would be run.
+        <br><br>
+        While my original program was just a set of functions to be called on loop with changing states based on user console input, the UI was simply not designed to be worked like that. At the time, 
+        I did not know of concurrency, synchrony, and asynchrony so while poking around example Java Swing projects, I realized that the UI works by having user input change the state of the program, rather 
+        than having the program call functions repeatedly. Refactoring my program after that was much easier than it took to realize my problem. I made it so clicks of buttons 
+        change the state of the game where I preprogrammed what happens in those states. For example, if I click next after a side attacks, then the program will go into the state where the opponent 
+        will begin their attack and the side that just attacked will then defend.
+
+
+
+        </p>
+        
+
+    
+    </div>
+
+    <hr>
 
     </main>
 

@@ -155,7 +155,7 @@ h1 {
     max-width:1200px;
 
 }
-.qualifications {
+.gray-rec {
 
     background-color: var(--accent-gray);
     border-radius: 12px;
@@ -180,7 +180,7 @@ h1 {
     overflow: auto;
 }
 
-.self-intro {
+.empty-rec {
 
     border-radius: 12px;
     border-width: 0 0 0 5px;
@@ -189,7 +189,7 @@ h1 {
     margin-top: 2%;
 }
 
-.self-intro p {
+.empty-rec p {
     text-justify: auto;
 }
 
@@ -291,13 +291,22 @@ h1 {
     border: solid 4px white;
     height: 400px;
     width: 100%;
+    
+}
+
+.small-thumbnail {
+    border: solid 4px white;
+    height: 400px;
+    width: 300px;
+    object-fit:cover;
 }
 
 .portfolio-section {
     width: 80%;
     max-width:1200px;
     padding: 2%;
-    text-align:center;
+    text-align:justify;
+    text-justify:none;
 }
 
 .portfolio-half {
@@ -305,6 +314,10 @@ h1 {
     text-align:left;
     width:49%;
     overflow:auto;
+}
+
+.width100 {
+    width:100%;
 }
 
 /*  Individual Projects pages styles ends */
