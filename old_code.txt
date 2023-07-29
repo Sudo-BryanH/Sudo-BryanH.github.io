@@ -2,3 +2,21 @@
             <div class="col-sm-7"><h1 class="nameplate">Bryan Hui</h1></div>
             <div class="col-sm-5"></div><img class="profilepic" src="pictures/whale54k.png" alt="whalepic"></div>
         </div>
+
+                <!--A single project preview starts-->
+        <div class="col-md-6 project-preview gx-2">
+            <button class="thumbnail"><img src="pictures/Database_demo1.gif" alt="gif"></button>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-9 project-name"><h3>Streaming Service Database</h3></div>
+                    <div class="col-lg-3 project-text">Jan-Apr 2023</div>
+                </div>
+                <hr>
+                <div class="row">
+                    <button type="button" href="https://github.com/Sudo-BryanH/Volleyball-Game" class="col-xs-6 btn btn-left-end" id="sdev"><i class="bi bi-github"></i> GitHub Repo</button>
+                    <button type="button" onclick="" class="col-xs-6 btn btn-right-end" id="sdev">See More <i class="bi bi-arrow-right"></i></button>
+ 
+                </div>
+            </div>
+        </div>
+        <!-- project ends-->

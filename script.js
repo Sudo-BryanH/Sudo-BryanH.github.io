@@ -1,3 +1,5 @@
+
+
 function loadProjectsPage() {
     console.log(document.getElementById("projects-button").textContent);
 
@@ -21,7 +23,7 @@ function loadAboutPage() {
 
 function sdev() {
     console.log(document.getElementById("sdev").textContent);
-    let html_ = "<b>Languages: </b>C/C++, Java, Python"+
+    let html_ = "<li><b>Languages: </b>C/C++, Java, Python</li>"+
     "<li>Object Oriented Programming/Design</li>"+ 
     " <li>Unit-testing using JUnit 5 and Catch2</li>"+
     "<li>Test-first development</li>" +
@@ -37,7 +39,7 @@ function sdev() {
 
 function db() {
     console.log(document.getElementById("db").textContent);
-    let html_ = "<b>DBMS: </b> MySQL"+
+    let html_ = "<li><b>DBMS: </b> MySQL</li>"+
     "<li>SQL querying</li>"+ 
     "<li>Database design using ER diagrams and normalization</li>"+
     "<li>Data Warehousing</li>" + 
@@ -53,7 +55,7 @@ function db() {
 
 function webdev() {
     console.log(document.getElementById("webdev").textContent);
-    let html_ = "<b>Technologies: </b> HTML, CSS, JavaScript*, JQuery*, Boostrap*"+
+    let html_ = "<li><b>Technologies: </b> HTML, CSS, JavaScript*, JQuery*, Boostrap*</li>"+
     "<li>Changing styles using CSS and JQuery</li>" +
     "<li>Manipulating HTML using JavaScript and JQuery</li>"
 
@@ -67,8 +69,8 @@ function webdev() {
 
 function dsci() {
     console.log(document.getElementById("dsci").textContent);
-    let html_ = "<b>Libraries (Python): </b> NumPy, pandas, scikit-learn, Bokeh, Matplotlib<br>" +
-    "<b>Machine-learning Algorithms: </b> regression (logistic, lasso), classification (using ROC curves)" +
+    let html_ = "<li><b>Libraries (Python): </b> NumPy, pandas, scikit-learn, Bokeh, Matplotlib<br></li>" +
+    "<li><b>Machine-learning Algorithms: </b> regression (linear, logistic, lasso), classification (using ROC curves)</li>" +
     "<li>Creation and cleaning of datasets using pandas</li>" +
     "<li>Perform mathematical calculations using NumPy</li>" +
     "<li>Plotting of data using pandas, Bokeh, and Matplotlib</li>" +
@@ -103,3 +105,45 @@ function clearAllTopButton() {
     $("#projects-button").css("color", "white");
 
 }
+
+function goToLink(link) {
+    window.location.href = link;
+}
+
+const darkLightMode = {
+    dark: false
+
+};
+
+function darkModeSwitch() {
+    if (!darkLightMode.dark) {
+        darkLightMode.dark = true;
+        $("#body").css("background-color", "var(--accent-dark-gray)");
+        $("#dark-light").removeClass("bi-moon");
+        $("#dark-light").addClass("bi-sun");
+        $(":root").css({"--accent-gray":"#6d6b6b"});
+
+    } else if (darkLightMode.dark) {
+        $("#body").css("background-color", "white");
+        $("#dark-light").removeClass("bi-sun");
+        $("#dark-light").addClass("bi-moon");
+        darkLightMode.dark = false;
+        $(":root").css({"--accent-gray":"#e3e3e3"});
+
+    } 
+}
+
+function overlayOn(id) {
+
+    document.getElementById(id).style.display = "block";
+
+    
+}
+
+function overlayOff(id) {
+
+    document.getElementById(id).style.display = "none";
+    
+}
+
+
