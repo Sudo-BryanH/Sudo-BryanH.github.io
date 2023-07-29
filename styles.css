@@ -74,6 +74,12 @@ h2 {
     font-size: 30px;
     font-weight: 400;
 }
+
+h1 {
+    font-size: 50px;
+    font-weight: 400;
+}
+
 /* end text styles*/
 
 
@@ -149,7 +155,7 @@ h2 {
     max-width:1200px;
 
 }
-.qualifications {
+.gray-rec {
 
     background-color: var(--accent-gray);
     border-radius: 12px;
@@ -174,7 +180,7 @@ h2 {
     overflow: auto;
 }
 
-.self-intro {
+.empty-rec {
 
     border-radius: 12px;
     border-width: 0 0 0 5px;
@@ -183,7 +189,7 @@ h2 {
     margin-top: 2%;
 }
 
-.self-intro p {
+.empty-rec p {
     text-justify: auto;
 }
 
@@ -191,7 +197,7 @@ h2 {
 
 /* Projects page styles */
 
-.project-container {
+.flex-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -235,6 +241,7 @@ h2 {
     border-radius:20px;
     max-width: 200px;
     width:fit-content;
+    padding:1%;
 
 }
 
@@ -273,11 +280,47 @@ h2 {
     color: var(--primary-accent);
     border-color: var(--primary-accent);
     width: fit-content;
-    padding:2%;
+    padding:1%;
 }
 
 
 /* Projects page styles end */
+
+/* Individual Projects pages styles */
+.large-thumbnail {
+    border: solid 4px white;
+    height: 400px;
+    width: 100%;
+    
+}
+
+.small-thumbnail {
+    border: solid 4px white;
+    height: 400px;
+    width: 300px;
+    object-fit:cover;
+}
+
+.portfolio-section {
+    width: 80%;
+    max-width:1200px;
+    padding: 2%;
+    text-align:justify;
+    text-justify:none;
+}
+
+.portfolio-half {
+    padding:2%;
+    text-align:left;
+    width:49%;
+    overflow:auto;
+}
+
+.width100 {
+    width:100%;
+}
+
+/*  Individual Projects pages styles ends */
 
 
 .sitefooter {
