@@ -8,11 +8,9 @@ function loadProjectsPage() {
     $("#projects-button").css("background-color", "white");
     $("#projects-button").css("color", "var(--primary-accent)");
     $("#content-panel").empty();
-    try {
-        $("#content-panel").load("projects.html");
-    } catch(err) {
-        $("#content-panel").load("https://sudo-bryanh.github.io/projects.html");
-    }
+    $("#content-panel").load("projects.html");
+
+
     
 }
 
