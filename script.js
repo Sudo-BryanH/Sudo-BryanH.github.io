@@ -77,7 +77,7 @@ function dsci() {
     "<li>Creation and cleaning of datasets using pandas</li>" +
     "<li>Perform mathematical calculations using NumPy</li>" +
     "<li>Plotting of data using pandas, Bokeh, and Matplotlib</li>" +
-    "<li>Basic understanding of machine-learnign algorithms such as various forms of regressions</li>"
+    "<li>Basic understanding of machine-learning algorithms such as various forms of regressions</li>"
 
     $("#skills").empty();
     clearAllQButton();
