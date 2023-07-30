@@ -5,7 +5,7 @@ This Github Pages website will serve as my portfolio and about page. Rather than
 Here is a mockup of how the website may look:
 <br></br>
 
-<img src="Website_demo3.gif" alt="demo">
+<img src="pictures/Website_demo3.gif" alt="demo">
 
 ## User Stories
 
