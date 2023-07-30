@@ -8,7 +8,8 @@ function loadProjectsPage() {
     $("#projects-button").css("background-color", "white");
     $("#projects-button").css("color", "var(--primary-accent)");
     $("#content-panel").empty();
-    $("#content-panel").load("projects.html");
+
+    $("#content-panel").load("https://sudo-bryanh.github.io/projects.html");
 }
 
 function loadAboutPage() {
@@ -18,7 +19,7 @@ function loadAboutPage() {
     $("#about-button").css("background-color", "white");
     $("#about-button").css("color", "var(--primary-accent)");
     $("#content-panel").empty();
-    $("#content-panel").load("about.html");
+    $("#content-panel").load("https://sudo-bryanh.github.io/about.html");
 }
 
 function sdev() {
