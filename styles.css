@@ -80,10 +80,12 @@ body {
   animation: 12s autoplay2 infinite ease-in-out}
 
 @keyframes autoplay2 {
-  0% {left: 100%; z-index:2;}
+  0% {left: 100%; z-index:2; opacity: 0%;}
+  0.1% { opacity: 100%}
   4% {left: 0%}
   33.33% {left: 0%}
-  37.33% {left: -200%}
+  37.33% {left: -200%; opacity: 100%;}
+  37.38% {opacity:0;}
   100% {left: -200%}
 }
 
