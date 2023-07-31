@@ -129,6 +129,8 @@ h1 {
 }
 
 .project-buttons {
+    position:relative;
+    bottom:0;
     width:100%;
     padding-top:0%;
 }
@@ -223,6 +225,7 @@ h1 {
   height: 420px;
   border-radius: 12px;
   flex-shrink:0;
+
 
 }
 
