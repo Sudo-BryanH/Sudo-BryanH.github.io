@@ -175,7 +175,13 @@ h1 {
 
 }
 
+.slideshow-buttons {
+    position:relative;
+    bottom:0;
+    width:40%;
+    min-width:400px;
 
+}
 
 .content-btn {
     margin-top:1%;
