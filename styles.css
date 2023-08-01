@@ -23,7 +23,7 @@ body {
     padding:2%;
     height:500px;
     background-color: var(--accent-dark-gray);
-    
+    position:relative;
 }
 
 .slideshow div {
@@ -41,12 +41,11 @@ body {
 }
 
 .slideshow-pic {
+    height:100%;
+    position:relative;
 
-    aspect-ratio: 4/3;
-    height:30%;
-    max-height: 400px;
     width:100%;
-
+    object-fit:cover;
     border-radius:12px;
     border: solid white;
 
@@ -61,7 +60,9 @@ body {
     color: white;
     background-color: var(--accent-mid-gray);
 
-    width:70%;
+    width:80%;
+    height:90%;
+
 
 }
 
@@ -72,14 +73,14 @@ body {
 
 }
 
-#slides > * {position:absolute; top:5xs0px; left: 0; 
+#slides > * {position:absolute; left: 0; 
   right: 0; 
   margin-left: auto; 
   margin-right: auto;
   animation: 12s autoplay2 infinite ease-in-out}
 
 @keyframes autoplay2 {
-  0% {left: 100%; z-index:2; opacity: 0%;}
+  0% {left: 100%; z-index:1; opacity: 0%;}
   0.1% { opacity: 100%}
   4% {left: 0%}
   33.33% {left: 0%}
