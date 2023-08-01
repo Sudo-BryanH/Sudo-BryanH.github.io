@@ -58,7 +58,7 @@ function db() {
 
 function webdev() {
     console.log(document.getElementById("webdev").textContent);
-    let html_ = "<li><b>Technologies: </b> HTML, CSS, JavaScript*, JQuery*, Boostrap*</li>"+
+    let html_ = "<li><b>Technologies: </b> HTML, CSS, JavaScript*, JQuery*, Bootstrap*</li>"+
     "<li>Changing styles using CSS and JQuery</li>" +
     "<li>Manipulating HTML using JavaScript and JQuery</li>"
 
