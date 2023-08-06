@@ -18,6 +18,39 @@
 <!-- the container of all the project previews-->
 <div class="flex-container flex-layout">
 
+        <!--A single project preview starts-->
+        <div class="project-preview">
+            <div class="thumbnail" onmouseenter="overlayOn('Database_thumbnail')" onmouseleave="overlayOff('Database_thumbnail')">
+                <div class="overlay preview-overlay" id="Database_thumbnail">
+                    <div class="container-fluid bubble-div">A Front-end Development Project</div>
+                    <div class="flex-container flex-layout">
+                        <div class="bubble-div skills-div">HTML</div>
+                        <div class="bubble-div skills-div">CSS</div>
+                        <div class="bubble-div skills-div">JavaScript</div>
+                        <div class="bubble-div skills-div">jQuery</div>
+                        <div class="bubble-div skills-div">Bootstrap</div>
+                    </div>
+                </div>
+                <video autoplay muted loop>
+                    <source src="pictures/Website_demo3v1.mp4" type="video/mp4">
+
+                </video>
+            </div>
+            <div class="container-fluid name-date">
+                <div class="row">
+                    <div class="col-lg-7 project-name"><h3>Portfolio Website</h3></div>
+                    <div class="col-lg-4 project-text bubble-div">July 2023</div>
+
+                </div>
+                <hr>
+                <div class="row buttons-container project-buttons">
+                    <button type="button" onclick="goToLink('https://github.com/Sudo-BryanH/Sudo-BryanH.github.io')" class="col-xs-6 btn btn-left-end"><i class="bi bi-github"></i> GitHub Repo</button>
+                    <button type="button" onclick="goToLink('stream_project.html')" class="col-xs-6 btn btn-right-end">See More <i class="bi bi-arrow-right"></i></button>
+ 
+                </div>
+            </div>
+        </div>
+        <!-- project ends-->
 
         <!--A single project preview starts-->
         <div class="project-preview">
