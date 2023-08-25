@@ -67,17 +67,41 @@
     <!--Introduction-->
     <div class="container-fluid portfolio-section">
         <h1 class="title">Introduction</h1>
+        <p><b>This is the cumulation of everything we had learned about relational databases. My group, consisting of my partners D and H had just to embark on a journey to create... </b>
+        <br><br>
+        A database program for a streaming service.
+        <br><br>
+        Admittedly, it was not the most inventive idea, but at the same time, this is a very likely use case for a relational database. Besides, even if the idea isn't very original, that doesn't 
+        mean we can't have original features, and I (and my group) were quite satisfied with how this program turned out. In the end, we created a program that allows users, artists, and admins to access and modify information
+        about their songs, playlists, albums, statistics, and finances, all without having to directly access the database server. 
 
+        </p>
         <div class="flex-container flex-layout width100">
             <div class="portfolio-half empty-rec">
-                <h3>Instructions</h3>
+                <h3>Instructions and Features</h3>
+
+                <b>This program begins with a login screen.</b> One who has an account with this streaming service or access to an admin account can sign in using their credentials. Afterwards they will be 
+                taken to a home page which lists some recommended songs where you can add each song to your library or give it a like. The user will also be able to add songs to their playlists in the library page. Finally,
+                The user can also look up their payment history as well as pay for their subscriptions on this program. 
+                <br><br>
+                Admins have a few more options. For example, admings will have the ability to look up statistics of songs, edit albums and songs, and give artists data on how consumers interacted 
+                with their songs. 
+                <br><br>
+                <i>**Unfortunately, because the MySQL server is linked to a private account, you will not be able to simply clone the project from GitHub and run it.</i>
+
 
             </div>
             <div class="portfolio-half gray-rec">
-                <h3>User Stories</h3>
-
+                    <h3>My Contributions</h3>
+                    <b>Every group member had some part in every aspect of development.</b> However, I would be remiss to say that everyone worked equally on every part of the project. There certainly were parts of the program that 
+                    every member had to work on, but outside of them, we mostly focused on our own parts.
+                    <br><br>
+                    My main area of focus was developing the library page where I focused on manipulating and displaying information about playlists and songs including the UI and database calls. Since this is my contribution 
+                    to the project, this is what I will focus on in this portfolio piece. 
             </div>
         </div>
+
+
     
     </div>
 
@@ -85,11 +109,33 @@
     <!--Planning-->
     <div class="container-fluid portfolio-section">
         <h1 class="title">Planning, coding...</h1>
-
+            <b>The first step to creating a database program is to design the schema.</b> As part of our first few milestones, my group had to come up with a relational 
+            schema, normalize it, and come up with some SQL DDL statements that would be used later in the database. One problem that occured was when we had to normalize our schema, the problem being that 
+            there was nothing to normalize so we had to come up with an legitimate yet original and useful redundancy in our database design to perform a 3NF normalization. 
+            <br><br>
+            <b>Up next was the coding. As with any good piece of software, we had to plan out the program, especially how users would interact with it. </b> We began with a sidebar with buttons that will display
+            different pages such as payment information or the user's library. Within each page, There would be a panel (or multiple) that can display information drawn from our queries. The way the data is presented varied
+            from page to page, but for the payments and library sections, the panels will just display a (well-spaced) wall of text with buttons to interact with the data. The home page was a bit more creative and instead of a wall
+            of text, it spaced out smaller elements (songs) into a grid with buttons to see more about the songs.
+            <br><br>
+            <b>Our tech stack utilized Java, Java Swing for the UI, and JDBC for database management. </b>For the database itself, we used D's university account to connect to a MySQL server. To run the program, we would have to connect to the MySQL 
+            database from either the terminal or the database tool provided by IntelliJ IDE. Then, we would have code that used JDBC to run pre-made queries and return the queried elements as arrays of strings or integers, or pairs of strings and integers. 
+            Pressing a button will be an event which calls a function to run the pre-made queries and then update the UI to display the relevant information. 
+            <br><br>
+            <b>After this (and quickly refreshing myself on some Java and Java Swing syntax), the coding process was relatively straightforward. </b> This was the first time using version control with multiple people, so it was certainly an experience. However, 
+            we also did our best to work on our own parts of the code in separate branches so conflicts were infrequent. I also resolved my bad habit of constantly pushing to main and instead making more local commits 
+            before pushing. There was one small slip up I did where I edited code without pulling, pushed to main, had to resolve the conflict but did it incorrectly and deleted a script. Thankfully, one of my partners had a backup and we were easily able to resolve
+            that problem. 
+            <br><br> 
+            <b>Another issue that arose close to our deadline was that we were lacking one of the requirements of the project. </b> Our project required that the user could query any relation they wanted. This would have be an easy feature to implement were we not
+            a mere couple of hours to the deadline. This was the one of the few times where everyone worked on the same feature simultaneously. While H & D worked on the UI, I worked on creating the function to query the database. One interesting aspect of implementing this 
+            feature was having to understand what my parameters my partners would use in the funtion and he wanted returned from the function, specifically the type. Normally when coding alone, this would all be considered in my head or on paper, or if it was a test this would be 
+            specified. However, this small act of understanding how or what a partner is working on made me understand how development in a team is like and it was <b>one of the most special moments of the project</b>.
 
         <hr>
         <!--If I were to go back...-->
         <h1>If I were to go back...</h1>
+        
 
         <hr>
         <!--final words-->

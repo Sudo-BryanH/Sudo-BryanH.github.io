@@ -149,4 +149,14 @@ function overlayOff(id) {
     
 }
 
+function randomPage() {
+    const articleArray = new Array('stream_project.html', 'vball_project.html');
+    const numArticles = 2;
+    let randNum = Math.random()*numArticles;
+    console.log(randNum)
+
+
+    goToLink(articleArray[randNum]);
+
+}
 

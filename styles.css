@@ -375,6 +375,10 @@ h1 {
     text-justify:none;
 }
 
+.portfolio-section .title {
+    text-align:center;
+}
+
 .portfolio-half {
     padding:2%;
     text-align:left;
