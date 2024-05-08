@@ -308,6 +308,13 @@ h1 {
     object-fit: cover;
 }
 
+    .videoFrame {
+        width: 1024px; /* Adjust this width as needed */
+        height: 640px; /* Adjust this height as needed */
+        background-color: #f0f0f0; /* Just for visualization */
+        margin: 0 auto; /* This will center the div horizontally */
+        text-align: center; /* This will center the content inside the div */
+    }
 
 .blur-img {
     filter:blur(6px);
