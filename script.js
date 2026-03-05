@@ -11,7 +11,7 @@ function loadProjectsPage() {
     $("#content-panel").load("projects.html");
 
 
-    
+
 }
 
 function loadAboutPage() {
@@ -26,12 +26,12 @@ function loadAboutPage() {
 
 function sdev() {
     console.log(document.getElementById("sdev").textContent);
-    let html_ = "<li><b>Languages: </b>C/C++, Java, Python</li>"+
-    "<li>Object Oriented Programming/Design</li>"+ 
-    " <li>Unit-testing using JUnit 5 and Catch2</li>"+
-    "<li>Test-first development</li>" +
-    "<li>Data structures and algorithms</li>" +
-    "<li>Design patterns*</li>"
+    let html_ = "<li><b>Languages: </b>C/C++, Java, Python</li>" +
+        "<li>Object Oriented Programming/Design</li>" +
+        " <li>Unit-testing using JUnit 5 and Catch2</li>" +
+        "<li>Test-first development</li>" +
+        "<li>Data structures and algorithms</li>" +
+        "<li>Design patterns</li>"
 
     $("#skills").empty();
     clearAllQButton();
@@ -42,11 +42,11 @@ function sdev() {
 
 function db() {
     console.log(document.getElementById("db").textContent);
-    let html_ = "<li><b>DBMS: </b> MySQL</li>"+
-    "<li>SQL querying</li>"+ 
-    "<li>Database design using ER diagrams and normalization</li>"+
-    "<li>Data Warehousing</li>" + 
-    "<li>Relational Algebra and Datalog</li>"
+    let html_ = "<li><b>DBMS: </b> MySQL</li>" +
+        "<li>SQL querying</li>" +
+        "<li>Database design using ER diagrams and normalization</li>" +
+        "<li>Data Warehousing</li>" +
+        "<li>Relational Algebra and Datalog</li>"
 
 
     $("#skills").empty();
@@ -58,9 +58,9 @@ function db() {
 
 function webdev() {
     console.log(document.getElementById("webdev").textContent);
-    let html_ = "<li><b>Technologies: </b> HTML, CSS, JavaScript*, JQuery*, Bootstrap*</li>"+
-    "<li>Changing styles using CSS and JQuery</li>" +
-    "<li>Manipulating HTML using JavaScript and JQuery</li>"
+    let html_ = "<li><b>Technologies: </b> HTML, CSS, JavaScript*, JQuery*, Bootstrap*</li>" +
+        "<li>Changing styles using CSS and JQuery</li>" +
+        "<li>Manipulating HTML using JavaScript and JQuery</li>"
 
 
     $("#skills").empty();
@@ -73,11 +73,11 @@ function webdev() {
 function dsci() {
     console.log(document.getElementById("dsci").textContent);
     let html_ = "<li><b>Libraries (Python): </b> NumPy, pandas, scikit-learn, Bokeh, Matplotlib<br></li>" +
-    "<li><b>Machine-learning Algorithms: </b> regression (linear, logistic, lasso), classification (using ROC curves)</li>" +
-    "<li>Creation and cleaning of datasets using pandas</li>" +
-    "<li>Perform mathematical calculations using NumPy</li>" +
-    "<li>Plotting of data using pandas, Bokeh, and Matplotlib</li>" +
-    "<li>Basic understanding of machine-learning algorithms such as various forms of regressions</li>"
+        "<li><b>Machine-learning Algorithms: </b> regression (linear, logistic, lasso), classification (using ROC curves)</li>" +
+        "<li>Creation and cleaning of datasets using pandas</li>" +
+        "<li>Perform mathematical calculations using NumPy</li>" +
+        "<li>Plotting of data using pandas, Bokeh, and Matplotlib</li>" +
+        "<li>Basic understanding of machine-learning algorithms such as various forms of regressions</li>"
 
     $("#skills").empty();
     clearAllQButton();
@@ -124,35 +124,35 @@ function darkModeSwitch() {
         $("#body").css("background-color", "var(--accent-dark-gray)");
         $("#dark-light").removeClass("bi-moon");
         $("#dark-light").addClass("bi-sun");
-        $(":root").css({"--accent-gray":"#6d6b6b"});
+        $(":root").css({ "--accent-gray": "#6d6b6b" });
 
     } else if (darkLightMode.dark) {
         $("#body").css("background-color", "white");
         $("#dark-light").removeClass("bi-sun");
         $("#dark-light").addClass("bi-moon");
         darkLightMode.dark = false;
-        $(":root").css({"--accent-gray":"#e3e3e3"});
+        $(":root").css({ "--accent-gray": "#e3e3e3" });
 
-    } 
+    }
 }
 
 function overlayOn(id) {
 
     document.getElementById(id).style.display = "block";
 
-    
+
 }
 
 function overlayOff(id) {
 
     document.getElementById(id).style.display = "none";
-    
+
 }
 
 function randomPage() {
     const articleArray = new Array('stream_project.html', 'vball_project.html');
     const numArticles = 2;
-    let randNum = Math.random()*numArticles;
+    let randNum = Math.random() * numArticles;
     console.log(randNum)
 
 
