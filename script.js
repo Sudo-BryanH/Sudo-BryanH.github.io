@@ -1,162 +1,81 @@
-
-
-function loadProjectsPage() {
-    console.log(document.getElementById("projects-button").textContent);
-
-    // TODO look at jQuery's .load() function
-    clearAllTopButton();
-    $("#projects-button").css("background-color", "white");
-    $("#projects-button").css("color", "var(--primary-accent)");
-    $("#content-panel").empty();
-    $("#content-panel").load("projects.html");
-
-
-
+/* =============================================
+   DARK MODE
+   ============================================= */
+function toggleDark() {
+  document.body.classList.toggle('dark');
+  const ic = document.getElementById('dark-icon');
+  ic.className = document.body.classList.contains('dark') ? 'bi bi-sun' : 'bi bi-moon';
 }
 
-function loadAboutPage() {
-    console.log(document.getElementById("about-button").textContent);
-
-    clearAllTopButton();
-    $("#about-button").css("background-color", "white");
-    $("#about-button").css("color", "var(--primary-accent)");
-    $("#content-panel").empty();
-    $("#content-panel").load("about.html");
+/* =============================================
+   TAB SWITCHING (About / Projects)
+   ============================================= */
+function switchTab(tab) {
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('view-' + tab).classList.add('active');
+  document.getElementById('tab-' + tab).classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-function sdev() {
-    console.log(document.getElementById("sdev").textContent);
-    let html_ = "<li><b>Languages: </b>C/C++, Java, Python</li>" +
-        "<li>Object Oriented Programming/Design</li>" +
-        " <li>Unit-testing using JUnit 5 and Catch2</li>" +
-        "<li>Test-first development</li>" +
-        "<li>Data structures and algorithms</li>" +
-        "<li>Design patterns</li>"
-
-    $("#skills").empty();
-    clearAllQButton();
-    $("#sdev").css("background-color", "white");
-    $("#sdev").css("color", "var(--primary-accent)");
-    $(html_).appendTo("#skills");
+/* =============================================
+   DETAIL VIEWS (project pages)
+   ============================================= */
+function showDetail(key) {
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('view-' + key).classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-function db() {
-    console.log(document.getElementById("db").textContent);
-    let html_ = "<li><b>DBMS: </b> MySQL</li>" +
-        "<li>SQL querying</li>" +
-        "<li>Database design using ER diagrams and normalization</li>" +
-        "<li>Data Warehousing</li>" +
-        "<li>Relational Algebra and Datalog</li>"
-
-
-    $("#skills").empty();
-    clearAllQButton();
-    $("#db").css("background-color", "white");
-    $("#db").css("color", "var(--primary-accent)");
-    $(html_).appendTo("#skills");
+function backToProjects() {
+  switchTab('projects');
 }
 
-function webdev() {
-    console.log(document.getElementById("webdev").textContent);
-    let html_ = "<li><b>Technologies: </b> HTML, CSS, JavaScript*, JQuery*, Bootstrap*</li>" +
-        "<li>Changing styles using CSS and JQuery</li>" +
-        "<li>Manipulating HTML using JavaScript and JQuery</li>"
-
-
-    $("#skills").empty();
-    clearAllQButton();
-    $("#webdev").css("background-color", "white");
-    $("#webdev").css("color", "var(--primary-accent)");
-    $(html_).appendTo("#skills");
-}
-
-function dsci() {
-    console.log(document.getElementById("dsci").textContent);
-    let html_ = "<li><b>Libraries (Python): </b> NumPy, pandas, scikit-learn, Bokeh, Matplotlib<br></li>" +
-        "<li><b>Machine-learning Algorithms: </b> regression (linear, logistic, lasso), classification (using ROC curves)</li>" +
-        "<li>Creation and cleaning of datasets using pandas</li>" +
-        "<li>Perform mathematical calculations using NumPy</li>" +
-        "<li>Plotting of data using pandas, Bokeh, and Matplotlib</li>" +
-        "<li>Basic understanding of machine-learning algorithms such as various forms of regressions</li>"
-
-    $("#skills").empty();
-    clearAllQButton();
-    $("#dsci").css("background-color", "white");
-    $("#dsci").css("color", "var(--primary-accent)");
-    $(html_).appendTo("#skills");
-}
-
-function clearAllQButton() {
-    $("#dsci").css("background-color", "var(--primary-accent)");
-    $("#dsci").css("color", "white");
-
-    $("#webdev").css("background-color", "var(--primary-accent)");
-    $("#webdev").css("color", "white");
-
-    $("#db").css("background-color", "var(--primary-accent)");
-    $("#db").css("color", "white");
-
-    $("#sdev").css("background-color", "var(--primary-accent)");
-    $("#sdev").css("color", "white");
-}
-
-function clearAllTopButton() {
-    $("#about-button").css("background-color", "var(--primary-accent)");
-    $("#about-button").css("color", "white");
-
-    $("#projects-button").css("background-color", "var(--primary-accent)");
-    $("#projects-button").css("color", "white");
-
-}
-
-function goToLink(link) {
-    window.location.href = link;
-}
-
-const darkLightMode = {
-    dark: false
-
-};
-
-function darkModeSwitch() {
-    if (!darkLightMode.dark) {
-        darkLightMode.dark = true;
-        $("#body").css("background-color", "var(--accent-dark-gray)");
-        $("#dark-light").removeClass("bi-moon");
-        $("#dark-light").addClass("bi-sun");
-        $(":root").css({ "--accent-gray": "#6d6b6b" });
-
-    } else if (darkLightMode.dark) {
-        $("#body").css("background-color", "white");
-        $("#dark-light").removeClass("bi-sun");
-        $("#dark-light").addClass("bi-moon");
-        darkLightMode.dark = false;
-        $(":root").css({ "--accent-gray": "#e3e3e3" });
-
-    }
-}
-
-function overlayOn(id) {
-
-    document.getElementById(id).style.display = "block";
-
-
-}
-
-function overlayOff(id) {
-
-    document.getElementById(id).style.display = "none";
-
-}
-
+/* =============================================
+   RANDOM PROJECT
+   ============================================= */
 function randomPage() {
-    const articleArray = new Array('stream_project.html', 'vball_project.html');
-    const numArticles = 2;
-    let randNum = Math.random() * numArticles;
-    console.log(randNum)
-
-
-    goToLink(articleArray[randNum]);
-
+  const keys = ['work', 'stream', 'bankrupt', 'vball', 'insight'];
+  showDetail(keys[Math.floor(Math.random() * keys.length)]);
 }
 
+
+
+/* =============================================
+   PROJECT SEARCH + FILTER
+   ============================================= */
+
+function filterProjects() {
+  const text = document.getElementById("project-search").value.toLowerCase();
+  const tech = document.getElementById("project-filter").value;
+
+  document.querySelectorAll(".card").forEach(card => {
+    const title = card.querySelector(".card-title")?.innerText.toLowerCase() || "";
+    const tags = Array.from(card.querySelectorAll(".overlay-tag")).map(t => t.innerText);
+
+    const matchText = title.includes(text);
+    const matchTech = tech === "all" || tags.includes(tech);
+
+    card.style.display = (matchText && matchTech) ? "" : "none";
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const s = document.getElementById("project-search");
+  const f = document.getElementById("project-filter");
+  if (s) s.addEventListener("input", filterProjects);
+  if (f) f.addEventListener("change", filterProjects);
+});
+
+/* =============================================
+   HERO RANDOM START
+   ============================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".hero-slide");
+  if (slides.length) {
+    const start = Math.floor(Math.random() * slides.length);
+    slides.forEach((s, i) => s.style.animationDelay = ((i - start) * 4) + "s");
+  }
+});

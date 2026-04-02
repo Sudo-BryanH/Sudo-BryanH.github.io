@@ -1,122 +1,713 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>  </body>
-    <link       
-        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Work+Sans:wght@100..900&display=swap"
-        rel="stylesheet"
-    />
-    <link rel="stylesheet" href="path/to/fontawesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-    <title>Bryan Hui's Portfolio Site</title>
-    <link rel="stylesheet" href = "styles.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="script.js" type="text/javascript"></script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bryan Hui — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body id="body">
 
-    <!--topbar-->
-    <div class="topbar container-fluid">
-        <div class="row">
-            <div class=col-xs-8><h3>Bryan Hui</h3></div>
-            <div class="col-xs-4 flex-container">
-                <div class="row">
-                    <div class="col-xs-2"></div>
-                    <a href="https://github.com/Sudo-BryanH" class="col-xs-2"><h3><i class="bi bi-github  contact-btn"></i></h3></a>
-                    <a href="https://www.linkedin.com/in/bryan-hui-4b8b3324b/" class="col-xs-2"><h3><i class="bi bi-linkedin  contact-btn"></i></h3></a>
-                    <a href="" class="col-xs-2"><h3><i class="bi bi-envelope  contact-btn"></i></h3></a>
-                    <a onclick="randomPage()" class="col-xs-2"><h3><i class="bi bi-dice-4  contact-btn"></i></h3></a>
-                    <a onclick="darkModeSwitch()" class="col-xs-2"><h3><i class="bi bi-moon contact-btn" id="dark-light"></i></h3></a>
-                </div>
-            </div>   
-    
+<body>
+
+  <!-- ===== TOPBAR ===== -->
+  <header class="topbar">
+    <span class="topbar-name">Bryan Hui</span>
+    <nav class="nav-row">
+      <button class="nav-tab active" id="tab-about" onclick="switchTab('about')">About Me</button>
+      <button class="nav-tab" id="tab-work" onclick="switchTab('work')">Work</button>
+      <button class="nav-tab" id="tab-projects" onclick="switchTab('projects')">Projects</button>
+    </nav>
+    <nav class="topbar-right">
+      <a href="https://github.com/Sudo-BryanH" target="_blank" class="topbar-icon" title="GitHub"><i
+          class="bi bi-github"></i></a>
+      <a href="https://www.linkedin.com/in/bryan-hui-4b8b3324b/" target="_blank" class="topbar-icon" title="LinkedIn"><i
+          class="bi bi-linkedin"></i></a>
+      <button class="topbar-icon" onclick="randomPage()" title="Random project"><i class="bi bi-dice-4"></i></button>
+      <button class="topbar-icon" onclick="toggleDark()" title="Toggle dark mode"><i class="bi bi-moon"
+          id="dark-icon"></i></button>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <!-- <section class="hero">
+    <div class="hero-slide">
+      <div>
+        <p class="hero-eyebrow">Database & Software</p>
+        <h2 class="hero-title">Streaming Service<br>Database</h2>
+        <div class="hero-actions">
+          <a href="https://github.com/Sudo-BryanH/Streaming-Service-Database" target="_blank"
+            class="btn btn-ghost-light"><i class="bi bi-github"></i> GitHub</a>
+          <button class="btn btn-solid" onclick="showDetail('stream')">See More <i
+              class="bi bi-arrow-right"></i></button>
         </div>
+      </div>
+    </div>
+    <div class="hero-slide">
+      <div>
+        <p class="hero-eyebrow">Data Science</p>
+        <h2 class="hero-title">Predicting<br>Bankruptcy</h2>
+        <div class="hero-actions">
+          <a href="https://github.com/Sudo-BryanH/Data-Science-Project-Predicitng-Bankruptcy" target="_blank"
+            class="btn btn-ghost-light"><i class="bi bi-github"></i> GitHub</a>
+          <button class="btn btn-solid" onclick="showDetail('bankrupt')">See More <i
+              class="bi bi-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="hero-slide hero-vball">
+      <div>
+        <p class="hero-eyebrow">Software Development</p>
+        <h2 class="hero-title">Volleyball<br>Game</h2>
+
+        <div class="hero-actions">
+          <a href="https://github.com/Sudo-BryanH/Volleyball-Game" target="_blank" class="btn btn-ghost-light">
+            <i class="bi bi-github"></i> GitHub
+          </a>
+
+          <button class="btn btn-solid" onclick="showDetail('vball')">
+            See More <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- ===== NAV TABS ===== -->
+  <!-- <nav class="nav-row">
+    <button class="nav-tab active" id="tab-about" onclick="switchTab('about')">About Me</button>
+    <button class="nav-tab" id="tab-work" onclick="switchTab('work')">Work</button>
+    <button class="nav-tab" id="tab-projects" onclick="switchTab('projects')">Projects</button>
+  </nav> -->
+
+  <!-- ===== ABOUT VIEW ===== -->
+  <div class="view active" id="view-about">
+    <div class="about-wrap">
+      <div>
+        <p class="about-eyebrow">Introduction</p>
+        <h2 class="about-heading">Hi, I'm Bryan.</h2>
+        <p class="about-body">I am someone who enjoys learning. The feeling when something finally clicks like a
+          puzzle
+          piece makes
+          the whole process of learning worth it.
+          As a fourth year computer science student at the University of British Columbia, I have been given
+          many opportunities to learn about a wide variety of topics
+          within and outside the field of computer science. From economics to religion, from applying linear
+          algebra to compress images to programming a whole C program
+          in assembly code, I found the process of learning from university to be a worthwhile one, even if it
+          was a little daunting.<br><br>
+          This portfolio is filled with projects and work that I am proud of. Not because they are necessarily of the
+          highest quality, but because they represent
+          my growth in technical skills. These programming projects are often done during or after a course I
+          have taken and used to solidify what I have learned
+          and apply it in passion projects. It is my humble hope that one day the product of my learning can
+          be of use to many others.</p>
+      </div>
+      <div class="quals-card">
+        <div>
+          <img src="pictures/IMG_3809.jpeg" width="100%">
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="quals-section">
+
+          <p class="quals-label">Education</p>
+          <h3 class="quals-title">University of British Columbia</h3>
+          <p class="quals-sub">4th Year Student</p>
+          <ul class="quals-list">
+            <li>BA Major in Computer Science</li>
+            <li>BA Minor in Mathematics</li>
+          </ul>
+        </div>
+        <div class="quals-section">
+          <p class="quals-label">Technical Experience</p>
+          <div class="detail-tags" style="margin-top:14px">
+            <span class="detail-tag">Python</span>
+            <span class="detail-tag">C/C++</span>
+            <span class="detail-tag">Java</span>
+            <span class="detail-tag">JavaScript/TypeScript</span>
+            <span class="detail-tag">Node.js</span>
+            <span class="detail-tag">REST API</span>
+            <span class="detail-tag">Docker</span>
+            <span class="detail-tag">Git</span>
+            <span class="detail-tag">Kubernetes*</span>
+            <span class="detail-tag">AWS*</span>
+
+          </div>
+          <p style="font-size:11px;color:var(--muted);margin-top:8px">*currently acquiring</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ===== WORK VIEW ===== -->
+  <div class="view" id="view-work">
+
+    <div class="work-wrap">
+
+      <!-- Location AI WORK CARD -->
+      <div class="work-card">
+
+        <div class="work-icon">
+          <img class="work-logo" src="pictures/comapnies/LAI.jpeg"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        </div>
+
+
+        <div class="work-content">
+
+          <!-- Header -->
+          <div class="work-header">
+            <h2 class="card-title">Software Engineer Intern</h2>
+            <span class="work-company">Location AI</span>
+            <span class="work-date">Jan 2024-May 2025, Jan 2026-Now</span>
+          </div>
+
+          <!-- Skills (always visible) -->
+          <div class="detail-tags" style="margin-top:14px">
+            <span class="detail-tag">Python</span>
+            <span class="detail-tag">C++</span>
+            <span class="detail-tag">JavaScript/TypeScript</span>
+            <span class="detail-tag">OpenCV</span>
+            <span class="detail-tag">Docker</span>
+            <span class="detail-tag">Git</span>
+            <span class="detail-tag">Kubernetes</span>
+          </div>
+
+          <!-- Experience dropdown -->
+          <details class="work-details">
+            <summary class="work-date">Experience</summary>
+
+            <ul style="list-style-type: square;">
+              <li>Developed an image segmentation computer vision model in Python and OpenCV for detecting stairs in
+                floor plans,
+                including dataset creation and model validation.</li>
+              <li>Enhanced a C++ image segmentation algorithm using graph techniques to connect detected walls and
+                corners in
+                floor plans, outputting the results as vector GeoJSON.</li>
+              <li>Deployed containerized FastAPI and web applications used for image processing to a private VM on
+                Azure
+                using Kubernetes (k3s), implementing CI/CD pipelines with GitHub Actions and Docker Hub for automated
+                builds
+                and rolling updates according to company specifications.</li>
+              <li>Developed an Electron-based user interface for easy selection and tuning of floor plans for the
+                algorithm, enabling visualization of changes in real-time, eliminating the trial and error process of
+                using a console program.</li>
+            </ul>
+
+          </details>
+
+        </div>
+
+      </div>
+
+
+      <!-- Smart location CARD -->
+      <div class="work-card">
+
+        <div class="work-icon">
+          <i class="bi bi-cpu"></i>
+        </div>
+
+        <div class="work-content">
+
+          <div class="work-header">
+            <h2 class="card-title">Software Engineer Intern</h2>
+            <span class="work-company">Smart Location Tech</span>
+            <span class="work-date">May – Dec 2025</span>
+          </div>
+
+          <div class="detail-tags" style="margin-top:14px">
+            <span class="detail-tag">Python</span>
+            <span class="detail-tag">Node.js</span>
+            <span class="detail-tag">MongoDB</span>
+            <span class="detail-tag">Google Cloud</span>
+            <span class="detail-tag">REST API</span>
+          </div>
+
+          <details class="work-details">
+            <summary class="work-date">Experience</summary>
+
+            <ul style="list-style-type: square;">
+              <li>Developed a RESTful Node.js API to ingest data from IoT devices, store it on a MongoDB server, and
+                validate
+                data integrity using blockchain during retrieval.</li>
+              <li>Built a Python program to access external MySQL databases containing data from the IoT devices and
+                continuously feed new sensor data into the API.</li>
+              <li>Packaged the system using Docker for deployment as a backend service on Google Cloud Platform.</li>
+            </ul>
+
+          </details>
+
+        </div>
+
+      </div>
+
+      <!-- TerraSense CARD -->
+      <div class="work-card">
+
+        <div class="work-icon">
+          <img class="work-logo" src="pictures/comapnies/TS.jpeg"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        </div>
+
+        <div class="work-content">
+
+          <div class="work-header">
+            <h2 class="card-title">Software Developer in Test</h2>
+            <span class="work-company">TerraSense Analytics</span>
+            <span class="work-date">Sept 2024 – Apr 2025</span>
+          </div>
+
+          <div class="detail-tags" style="margin-top:14px">
+            <span class="detail-tag">Python</span>
+            <span class="detail-tag">C++</span>
+            <span class="detail-tag">Docker</span>
+            <span class="detail-tag">Scripting</span>
+            <span class="detail-tag">Testing</span>
+          </div>
+
+          <details class="work-details">
+            <summary class="work-date">Experience</summary>
+
+            <ul style="list-style-type: square;">
+              <li>Developed testing software for TerraSense’s AI-driven real-time detection system, MIST, compiling
+                JSON
+                test
+                summary files per test run to enable efficient performance metric tracking in nightly CI/CD pipelines.
+              </li>
+              <li>Utilized my C++ expertise to resolve a feature-breaking deadlock in MIST ’s custom caching system by
+                partially
+                redesigning it to address logical flaws, synchronization issues, and memory bugs.</li>
+              <li>Automated the calibration process for video ground truth labeling using a Python script reducing
+                manual
+                adjustments from thousands of frames to hundreds and up to 97% for one test video.</li>
+            </ul>
+
+          </details>
+
+        </div>
+
+      </div>
+
     </div>
 
-    <!--slideshow-->
-    <div class="slideshow" id="slides">
-        <!--slideshow will automatically slide-->
-        <!--slide-->
-        <div class="slide">
-            <video class="slideshow-pic" autoplay muted loop>
-                <source src="pictures/Database_demo2.mp4" type="video/mp4">
-            </video>
-            <div class="overlay slideshow-overlay slideshow-text">
-                <h2 class="bubble-div skills-div title text-center container-fluid">Streaming Service Database</h2>
+  </div>
+  <!-- ===== PROJECTS VIEW ===== -->
+  <div class="view" id="view-projects">
 
+    <div class="project-controls"
+      style="max-width:1060px;margin:20px auto 0;padding:0 52px;display:flex;gap:10px;flex-wrap:wrap">
+      <input id="project-search" placeholder="Search projects..."
+        style="padding:8px 10px;border:1px solid var(--border);flex:1;min-width:180px">
+      <select id="project-filter" style="padding:8px 10px;border:1px solid var(--border)">
+        <option value="all">All Technologies</option>
+        <option value="Java">Java</option>
+        <option value="Python">Python</option>
+        <option value="SQL">SQL</option>
+        <option value="C++">C++</option>
+        <option value="JavaScript">JavaScript</option>
+      </select>
+    </div>
 
-                    <div class="row buttons-container slideshow-buttons">
-                        <button type="button" onclick="goToLink('https://github.com/Sudo-BryanH/Streaming-Service-Database')"" class="col-xs-6 btn btn-left-end"><i class="bi bi-github"></i> GitHub Repo</button>
-                        <button type="button" onclick="goToLink('stream_project.html')" class="col-xs-6 btn btn-right-end">See More <i class="bi bi-arrow-right"></i></button>
-                    </div>
+    <div class="projects-wrap">
+      <div class="projects-grid">
+
+        <div class="card">
+          <div class="card-thumb">
+            <img src="pictures/310proj.png"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="thumb-placeholder" style="display:none"><i class="bi bi-cpu"></i></div>
+            <div class="card-overlay">
+              <p class="overlay-type">Full Stack Application</p>
+              <div class="overlay-tags">
+                <span class="overlay-tag">HTML</span><span class="overlay-tag">CSS</span>
+                <span class="overlay-tag">TypeScript</span><span class="overlay-tag">Node.js</span>
+                <span class="overlay-tag">REST API</span><span class="overlay-tag">Agile</span>
+                <span class="overlay-tag">Scrum</span><span class="overlay-tag">Test-Driven Development</span>
+              </div>
             </div>
-
-        </div>
-
-        <!--slide-->
-        <div class="slide">
-            <video class="slideshow-pic" autoplay muted loop>
-                <source src="pictures/E323_demo.mp4" type="video/mp4">
-            </video>
-            <div class="overlay slideshow-overlay slideshow-text">
-                <h2 class="bubble-div skills-div title text-center container-fluid">Predicting Bankruptcy</h2>
-
-
-                    <div class="row buttons-container slideshow-buttons">
-                        <button type="button" onclick="goToLink('https://github.com/Sudo-BryanH/Data-Science-Project-Predicitng-Bankruptcy')"" class="col-xs-6 btn btn-left-end"><i class="bi bi-github"></i> GitHub Repo</button>
-                        <button type="button"  onclick="goToLink('bankrupt_project.html')" class="col-xs-6 btn btn-right-end">See More <i class="bi bi-arrow-right"></i></button>
-                    </div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-title">Insight UBC</span>
+              <span class="card-date">Jan–Apr 2024</span>
             </div>
-
-        </div>
-
-        <!--slide-->
-        <div class="slide">
-            <video class="slideshow-pic" autoplay muted loop>
-                <source src="pictures/Volleyball_game_demo.mp4" type="video/mp4">
-            </video>
-            <div class="overlay slideshow-overlay slideshow-text">
-                <h2 class="bubble-div skills-div title text-center container-fluid">Volleyball Game</h2>
-
-                    <div class="row buttons-container slideshow-buttons">
-                        <button type="button" onclick="goToLink('https://github.com/Sudo-BryanH/Volleyball-Game')"" class="col-xs-6 btn btn-left-end"><i class="bi bi-github"></i> GitHub Repo</button>
-                        <button type="button" onclick="goToLink('vball_project.html')" class="col-xs-6 btn btn-right-end">See More <i class="bi bi-arrow-right"></i></button>
-                    </div>
+            <div class="card-actions">
+              <button class="card-btn"><i class="bi bi-github"></i> No Repo</button>
+              <button class="card-btn" onclick="showDetail('insight')">See More <i
+                  class="bi bi-arrow-right"></i></button>
             </div>
-
+          </div>
         </div>
 
+        <div class="card">
+          <div class="card-thumb">
+            <video autoplay muted loop>
+              <source src="pictures/E323_demo.mp4" type="video/mp4">
+            </video>
+            <div class="card-overlay">
+              <p class="overlay-type">Data Science Project</p>
+              <div class="overlay-tags">
+                <span class="overlay-tag">Python</span><span class="overlay-tag">NumPy</span>
+                <span class="overlay-tag">pandas</span><span class="overlay-tag">scikit-learn</span>
+                <span class="overlay-tag">Bokeh</span><span class="overlay-tag">Matplotlib</span>
+                <span class="overlay-tag">Logistic Regression</span><span class="overlay-tag">ROC Curve</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-title">Predicting Bankruptcy</span>
+              <span class="card-date">Jan–Apr 2023</span>
+            </div>
+            <div class="card-actions">
+              <button class="card-btn"
+                onclick="window.open('https://github.com/Sudo-BryanH/Data-Science-Project-Predicitng-Bankruptcy','_blank')"><i
+                  class="bi bi-github"></i> GitHub</button>
+              <button class="card-btn" onclick="showDetail('bankrupt')">See More <i
+                  class="bi bi-arrow-right"></i></button>
+            </div>
+          </div>
+        </div>
 
+        <div class="card">
+          <div class="card-thumb">
+            <video autoplay muted loop>
+              <source src="pictures/Database_demo2.mp4" type="video/mp4">
+            </video>
+            <div class="card-overlay">
+              <p class="overlay-type">Database & Software</p>
+              <div class="overlay-tags">
+                <span class="overlay-tag">SQL</span><span class="overlay-tag">MySQL</span>
+                <span class="overlay-tag">JDBC</span><span class="overlay-tag">ER-Diagrams</span>
+                <span class="overlay-tag">Normalization</span><span class="overlay-tag">Java Swing</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-title">Streaming Service Database</span>
+              <span class="card-date">Jan–Apr 2023</span>
+            </div>
+            <div class="card-actions">
+              <button class="card-btn"
+                onclick="window.open('https://github.com/Sudo-BryanH/Streaming-Service-Database','_blank')"><i
+                  class="bi bi-github"></i> GitHub</button>
+              <button class="card-btn" onclick="showDetail('stream')">See More <i
+                  class="bi bi-arrow-right"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-thumb">
+            <img src="pictures/NoImageAvailable.jpg"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="thumb-placeholder" style="display:none"><i class="bi bi-signpost-2"></i></div>
+            <div class="card-overlay">
+              <p class="overlay-type">Software Development</p>
+              <div class="overlay-tags">
+                <span class="overlay-tag">C++</span><span class="overlay-tag">Git/GitHub</span>
+                <span class="overlay-tag">Catch2</span><span class="overlay-tag">Hashmaps</span>
+                <span class="overlay-tag">Linked Lists</span><span class="overlay-tag">GDB</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-title">Ride Planning Program</span>
+              <span class="card-date">Dec 2022–Feb 2023</span>
+            </div>
+            <div class="card-actions">
+              <button class="card-btn" onclick="window.open('https://github.com/Sudo-BryanH/Ride-Planning','_blank')"><i
+                  class="bi bi-github"></i> GitHub</button>
+              <button class="card-btn" onclick="showDetail('ride')">See More <i class="bi bi-arrow-right"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-thumb">
+            <video autoplay muted loop>
+              <source src="pictures/Volleyball_game_demo.mp4" type="video/mp4">
+            </video>
+            <div class="card-overlay">
+              <p class="overlay-type">Software Development</p>
+              <div class="overlay-tags">
+                <span class="overlay-tag">Java</span><span class="overlay-tag">JUnit5</span>
+                <span class="overlay-tag">Java Swing</span><span class="overlay-tag">JSON</span>
+                <span class="overlay-tag">Singleton Pattern</span><span class="overlay-tag">Git</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-title">Volleyball Game</span>
+              <span class="card-date">Jan–Apr 2022</span>
+            </div>
+            <div class="card-actions">
+              <button class="card-btn"
+                onclick="window.open('https://github.com/Sudo-BryanH/Volleyball-Game','_blank')"><i
+                  class="bi bi-github"></i> GitHub</button>
+              <button class="card-btn" onclick="showDetail('vball')">See More <i class="bi bi-arrow-right"></i></button>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
+  </div>
 
-
-
-   <main class="main-section">
-       <!-- content picker button-->
-    <div class="buttons-container content-btn">
-
-        <button  type="button" onclick="loadAboutPage()" class="col-md-6 btn btn-left-end" id="about-button"><h3>About Me</h3></button>
-        <button type="button" onclick="loadProjectsPage()" class="col-md-6 btn btn-right-end" id="projects-button"><h3>Projects</h3></button>
-
+  <!-- ===== DETAIL: INSIGHT UBC ===== -->
+  <div class="view" id="view-insight">
+    <div class="detail-header">
+      <div>
+        <button class="back-btn" onclick="backToProjects()"><i class="bi bi-arrow-left"></i> All Projects</button>
+        <h1 class="detail-title">Insight UBC</h1>
+        <span class="detail-date">Jan–Apr 2024</span>
+        <div class="detail-tags" style="margin-top:14px">
+          <span class="detail-tag">Node.js</span><span class="detail-tag">REST API</span>
+          <span class="detail-tag">TypeScript</span><span class="detail-tag">HTML</span>
+          <span class="detail-tag">CSS</span><span class="detail-tag">Agile</span>
+          <span class="detail-tag">Scrum</span><span class="detail-tag">Test-Driven Development</span>
+        </div>
+      </div>
+      <div>
+        <div class="detail-media">
+          <img src="pictures/310proj.png"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="media-placeholder" style="display:none"><i class="bi bi-cpu"></i></div>
+        </div>
+      </div>
     </div>
-
-
-
-    <!-- content panel-->
- 
-    <div class="content-panel container-fluid" id="content-panel">
-    <script type="text/javascript">
-        loadAboutPage()
-    </script>
+    <div class="detail-body">
+      <h2 class="section-rule">Introduction &amp; Video</h2>
+      <p><b>Insight UBC is a platform designed for managing historical data related to university courses and
+          buildings.</b> It facilitates user actions such as uploading, querying, and removing datasets seamlessly,
+        and
+        presents insightful statistics through interactive graphs.</p>
+      <div class="two-col">
+        <div class="info-box">
+          <h3>Engineering Concepts</h3>
+          <ul style="padding-left:14px;border-left:2px solid var(--accent)">
+            <li><b>TDD:</b> Mocha and Chai frameworks, tests written to spec.</li>
+            <li><b>REST APIs:</b> RESTful design enabling clean frontend/backend communication.</li>
+            <li><b>Agile/Scrum:</b> Iterative sprints, weekly TA scrum meetings.</li>
+          </ul>
+        </div>
+        <div class="info-box">
+          <h3>Note on Source Code</h3>
+          <p>It was against academic policy to post source code for this project, so we posted a video walkthrough of
+            the final program instead.</p>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:28px">
+        <iframe width="100%" height="400" src="https://youtube.com/embed/75JvkotGXSQ?autoplay=1&mute=1"
+          style="border:1px solid var(--border);max-width:900px;display:block;margin:0 auto"></iframe>
+      </div>
     </div>
-    </main>
-    <!-- site footer-->
-    <div class = "sitefooter"></div>
+  </div>
 
-    
+  <!-- ===== DETAIL: STREAMING DB ===== -->
+  <div class="view" id="view-stream">
+    <div class="detail-header">
+      <div>
+        <button class="back-btn" onclick="backToProjects()"><i class="bi bi-arrow-left"></i> All Projects</button>
+        <h1 class="detail-title">Streaming Service Database</h1>
+        <span class="detail-date">Jan–Apr 2023</span>
+        <div class="detail-tags" style="margin-top:14px">
+          <span class="detail-tag">SQL</span><span class="detail-tag">MySQL</span>
+          <span class="detail-tag">JDBC</span><span class="detail-tag">Java Swing</span>
+          <span class="detail-tag">ER-Diagrams</span><span class="detail-tag">Normalization</span>
+        </div>
+      </div>
+      <div>
+        <div class="detail-media">
+          <video autoplay muted loop>
+            <source src="pictures/Database_demo2.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+    <div class="detail-body">
+      <h2 class="section-rule">Introduction</h2>
+      <p><b>This is the culmination of everything I had learned about relational databases.</b> My group — partners D
+        and H — set out to create a database program for a streaming service. We created a program that lets users,
+        artists, and admins access and modify songs, playlists, albums, statistics, and finances without touching the
+        database server directly.</p>
+      <div class="two-col">
+        <div class="info-box">
+          <h3>Instructions &amp; Features</h3>
+          <p>The program begins with a <b>login screen</b>. After signing in, users reach a home page with recommended
+            songs, a library to manage playlists, and a payment history section. Admins can also look up song
+            statistics
+            and provide artists with engagement data.</p>
+          <p style="margin-top:10px"><i>**The MySQL server is linked to a private account, so you cannot simply clone
+              and run it.</i></p>
+        </div>
+        <div class="info-box">
+          <h3>My Contributions</h3>
+          <p>My main focus was the <b>library page</b> — manipulating and displaying playlist and song data, including
+            the UI and all database calls.</p>
+        </div>
+      </div>
+      <h2 class="section-rule">Planning &amp; Coding</h2>
+      <p><b>The first step was designing the schema.</b> We normalized it and wrote SQL DDL statements. One challenge:
+        our schema had nothing obvious to normalize, so we engineered a legitimate redundancy to perform 3NF
+        normalization.</p>
+      <p><b>Tech stack: Java, Java Swing (UI), and JDBC (database).</b> JDBC runs pre-made queries and returns arrays
+        of
+        strings or integers. Button clicks fire events that call query functions and update the UI.</p>
+      <p>Near the deadline, collaborating simultaneously with my partners on the user-defined query feature —
+        coordinating function signatures, parameter types, and return values in real time — was <b>one of the most
+          special moments of the project</b>. A genuine taste of team development.</p>
+      <h2 class="section-rule">Final Thoughts</h2>
+      <p>Working with version control across a team, resolving merge conflicts, and coordinating on a shared codebase
+        were invaluable experiences. Even the one slip-up where I deleted a script after a bad merge was a good
+        learning
+        moment.</p>
+    </div>
+  </div>
+
+  <!-- ===== DETAIL: BANKRUPTCY ===== -->
+  <div class="view" id="view-bankrupt">
+    <div class="detail-header">
+      <div>
+        <button class="back-btn" onclick="backToProjects()"><i class="bi bi-arrow-left"></i> All Projects</button>
+        <h1 class="detail-title">Predicting Bankruptcy</h1>
+        <span class="detail-date">Jan–Apr 2023</span>
+        <div class="detail-tags" style="margin-top:14px">
+          <span class="detail-tag">Python</span><span class="detail-tag">NumPy</span>
+          <span class="detail-tag">pandas</span><span class="detail-tag">scikit-learn</span>
+          <span class="detail-tag">Bokeh</span><span class="detail-tag">Matplotlib</span>
+          <span class="detail-tag">Logistic Regression</span><span class="detail-tag">ROC Curve</span>
+        </div>
+      </div>
+      <div>
+        <div class="detail-media">
+          <video autoplay muted loop>
+            <source src="pictures/E323_demo.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+    <div class="detail-body">
+      <div class="construction"><i class="bi bi-tools"></i>
+        <p>This page is under construction. Check out another project or hit the dice icon above.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== DETAIL: RIDE PLANNING ===== -->
+  <div class="view" id="view-ride">
+    <div class="detail-header">
+      <div>
+        <button class="back-btn" onclick="backToProjects()"><i class="bi bi-arrow-left"></i> All Projects</button>
+        <h1 class="detail-title">Ride Planning Program</h1>
+        <span class="detail-date">Dec 2022–Feb 2023</span>
+        <div class="detail-tags" style="margin-top:14px">
+          <span class="detail-tag">C++</span><span class="detail-tag">Git/GitHub</span>
+          <span class="detail-tag">Catch2</span><span class="detail-tag">Hashmaps</span>
+          <span class="detail-tag">Linked Lists</span><span class="detail-tag">GDB</span>
+        </div>
+      </div>
+      <div>
+        <div class="detail-media">
+          <div class="media-placeholder"><i class="bi bi-signpost-2"></i></div>
+        </div>
+      </div>
+    </div>
+    <div class="detail-body">
+      <div class="construction"><i class="bi bi-tools"></i>
+        <p>This page is under construction. Check out another project or hit the dice icon above.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== DETAIL: VOLLEYBALL ===== -->
+  <div class="view" id="view-vball">
+    <div class="detail-header">
+      <div>
+        <button class="back-btn" onclick="backToProjects()"><i class="bi bi-arrow-left"></i> All Projects</button>
+        <h1 class="detail-title">Volleyball Game</h1>
+        <span class="detail-date">Jan–Apr 2022</span>
+        <div class="detail-tags" style="margin-top:14px">
+          <span class="detail-tag">Java</span><span class="detail-tag">JUnit5</span>
+          <span class="detail-tag">Java Swing</span><span class="detail-tag">JSON parsing</span>
+          <span class="detail-tag">Singleton Pattern</span><span class="detail-tag">Git</span>
+        </div>
+      </div>
+      <div>
+        <div class="detail-media">
+          <video autoplay muted loop>
+            <source src="pictures/Volleyball_game_demo.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+    <div class="detail-body">
+      <h2 class="section-rule">Introduction</h2>
+      <p><b>I am a huge fan of volleyball.</b> I have always considered it to be a simple sport, but after doing
+        research I found the complex strategies to be fascinating. This game requires some volleyball strategy and
+        intuition, as well as a bit of luck.</p>
+      <div class="two-col">
+        <div class="info-box">
+          <h3>Instructions</h3>
+          <ol style="padding-left:16px;list-style:decimal">
+            <li>Declare your players and roster, or load a saved game</li>
+            <li>Press "Next" to start with a serve</li>
+            <li>Position defenders before each attack, then press "Next"</li>
+            <li>Guess which red spot the opponent will attack</li>
+            <li>If you receive, choose a front-row player and attack spot</li>
+            <li>Rally continues until a side fails to receive</li>
+            <li>Press "Quit and Save" to end and persist the game</li>
+          </ol>
+        </div>
+        <div class="info-box">
+          <h3>User Stories</h3>
+          <ul style="padding-left:14px;border-left:2px solid var(--accent)">
+            <li>Add an arbitrary number of players to my team</li>
+            <li>Choose which opposing team to play</li>
+            <li>Choose my starting 6 players</li>
+            <li>Arrange positions before enemy attacks</li>
+            <li>Decide which player spikes after a receive</li>
+            <li>See the scoreboard and save/resume matches</li>
+          </ul>
+        </div>
+      </div>
+      <h2 class="section-rule">Planning, Coding, and Back to the Drawing Board</h2>
+      <p><b>The first step was a working concept.</b> I settled on representing the ball, court, game, teams, and
+        players as classes with concrete subclasses for positions. The game would run through a repeated set of state
+        transitions.</p>
+      <p><b>My real problems started with the UI.</b> A synchronous linear program is fundamentally at odds with Java
+        Swing's event-driven paradigm. A screen-whitening bug forced me to confront this. The fix: redesign around
+        state
+        — each button click transitions the game, rather than the program looping through functions.</p>
+      <p><b>I added a singleton logging class</b> and a JSON reader/writer to persist game state across sessions.</p>
+      <h2 class="section-rule">If I Were to Go Back…</h2>
+      <p>I would fix the ball-animation timing bug, add a blocking system and proper player substitution, and explore
+        a
+        local or networked multiplayer mode.</p>
+      <h2 class="section-rule">Final Thoughts</h2>
+      <p>This was my first big programming project — a massive exercise in problem solving, creative design, pride,
+        and
+        frustration. I gained hands-on experience with test-first design, OOP principles, and third-party libraries.
+        Far
+        from a work of art, but the first real step in becoming a developer.</p>
+    </div>
+  </div>
+
+  <footer class="sitefooter">
+    <p class="footer-text">Bryan Hui &nbsp;·&nbsp; UBC Computer Science</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
